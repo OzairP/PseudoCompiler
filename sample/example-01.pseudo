@@ -1,0 +1,40 @@
+// Sample single line
+let foo: string = "hello";
+let pi: f32 = 3.14;
+let xyz: bool = true;
+let zyx: bool = false;
+let sqr = 2 ** 2;
+let sqrIsFour = sqr === 4;
+let sqrIsFourish = sqr == "4";
+
+/*
+Sample
+Multi
+Line
+*/
+let bar = "world";
+
+print(foo + "
+awesome
+" + bar);
+
+let num = 0;
+
+let add = func (i32 a, i32 b): i32 {
+	return a + b;
+};
+
+print(add(num, 5));
+
+func inc (mut i32 a): void {
+	a = a + 1;
+}
+
+let mut num2 = num;
+inc(num2);
+
+if(num2 <= 5) {
+	print("less than or eql to five");
+}
+
+print(num2);

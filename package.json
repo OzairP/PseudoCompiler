@@ -1,0 +1,49 @@
+{
+	"name": "pseudo-compiler",
+	"version": "1.0.0",
+	"description": "Educational compiler built in TypeScript to execute Pseudo lang",
+	"main": "build/index.js",
+	"repository": "https://github.com/OzairP/PseudoLangCompiler",
+	"author": "Ozair Patel <ozairpatel2@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc",
+		"start": "node ./build",
+		"test": "jest",
+		"lint": "tslint -p .",
+		"lint:fix": "yarn tslint --fix",
+		"prettier": "prettier \"src/**/*.ts\"",
+		"prettier:fix": "yarn prettier --write"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"clearMocks": true,
+		"collectCoverage": true,
+		"testEnvironment": "node",
+		"coverageDirectory": "coverage",
+		"coveragePathIgnorePatterns": [
+			"index.ts$",
+			"<rootDir>/language/"
+		],
+		"testMatch": [
+			"<rootDir>/src/**/*.test.ts"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"js"
+		]
+	},
+	"devDependencies": {
+		"@types/jest": "^24.0.9",
+		"@types/node": "^10.12.18",
+		"jest": "^24.1.0",
+		"prettier": "^1.16.4",
+		"source-map-support": "^0.5.10",
+		"ts-jest": "^24.0.0",
+		"ts-node": "^7.0.1",
+		"tslint": "^5.13.1",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.3.3"
+	},
+	"dependencies": {}
+}

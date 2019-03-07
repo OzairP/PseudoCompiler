@@ -1,0 +1,44 @@
+{
+	"defaultSeverity": "error",
+	"extends": ["tslint:recommended", "tslint-config-prettier"],
+	"rules": {
+		// --- Vanilla Linting ---
+		"completed-docs": true,
+		"member-access": true,
+		"no-construct": true,
+		"no-debugger": true,
+		"no-duplicate-super": true,
+		"no-floating-promises": true,
+		"no-return-await": true,
+		"no-string-throw": true,
+		"no-use-before-declare": true,
+		"no-var-keyword": true,
+		"radix": false,
+		"triple-equals": true,
+		"use-isnan": true,
+		"cyclomatic-complexity": true,
+		"deprecation": true,
+		"no-default-export": true,
+		"no-duplicate-imports": true,
+		"no-require-imports": true,
+		"prefer-const": true,
+		"class-name": true,
+		"newline-before-return": true,
+		"no-angle-bracket-type-assertion": true,
+		"no-redundant-jsdoc": true,
+		"no-unnecessary-callback-wrapper": true,
+		"ordered-imports": true,
+		"variable-name": [true, "allow-pascal-case"],
+		"array-type": [true, "generic"],
+		"comment-format": [true, "check-space"],
+		"max-file-line-count": {
+			"severity": "warning",
+			"options": [300]
+		},
+		"interface-name": [true, "never-prefix"],
+		"no-unused-expression": [true, "allow-fast-null-checks"],
+		"max-union-size": false,
+		"only-arrow-functions": false,
+		"object-literal-sort-keys": false
+	}
+}
