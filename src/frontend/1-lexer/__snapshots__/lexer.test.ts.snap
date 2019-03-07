@@ -1,0 +1,505 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tokenizer matches snapshot 1`] = `
+Array [
+  Array [
+    "SINGLE_LINE_COMMENT",
+    "// Sample single line",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "foo",
+  ],
+  Array [
+    "COLON",
+  ],
+  Array [
+    "TYPE_STRING",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "STRING_LITERAL",
+    "\\"hello\\"",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "pi",
+  ],
+  Array [
+    "COLON",
+  ],
+  Array [
+    "TYPE_FLOAT32",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "NUMERIC_LITERAL",
+    "3.14",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "xyz",
+  ],
+  Array [
+    "COLON",
+  ],
+  Array [
+    "TYPE_BOOL",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "KEYWORD_TRUE",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "zyx",
+  ],
+  Array [
+    "COLON",
+  ],
+  Array [
+    "TYPE_BOOL",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "KEYWORD_FALSE",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "sqr",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "NUMERIC_LITERAL",
+    "2",
+  ],
+  Array [
+    "EXPONENTIAL",
+  ],
+  Array [
+    "NUMERIC_LITERAL",
+    "2",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "sqrIsFour",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "IDENTIFIER",
+    "sqr",
+  ],
+  Array [
+    "STRICT_COMP",
+  ],
+  Array [
+    "NUMERIC_LITERAL",
+    "4",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "sqrIsFourish",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "IDENTIFIER",
+    "sqr",
+  ],
+  Array [
+    "EQUALITY_COMP",
+  ],
+  Array [
+    "STRING_LITERAL",
+    "\\"4\\"",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "MULTI_LINE_COMMENT",
+    "/*
+Sample
+Multi
+Line
+*/",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "bar",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "STRING_LITERAL",
+    "\\"world\\"",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "IDENTIFIER",
+    "print",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "IDENTIFIER",
+    "foo",
+  ],
+  Array [
+    "PLUS",
+  ],
+  Array [
+    "STRING_LITERAL",
+    "\\"
+awesome
+\\"",
+  ],
+  Array [
+    "PLUS",
+  ],
+  Array [
+    "IDENTIFIER",
+    "bar",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "num",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "NUMERIC_LITERAL",
+    "0",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "IDENTIFIER",
+    "add",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "KEYWORD_FUNC",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "TYPE_INT32",
+  ],
+  Array [
+    "IDENTIFIER",
+    "a",
+  ],
+  Array [
+    "COMMA",
+  ],
+  Array [
+    "TYPE_INT32",
+  ],
+  Array [
+    "IDENTIFIER",
+    "b",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "COLON",
+  ],
+  Array [
+    "TYPE_INT32",
+  ],
+  Array [
+    "OPEN_BRACE",
+  ],
+  Array [
+    "KEYWORD_RETURN",
+  ],
+  Array [
+    "IDENTIFIER",
+    "a",
+  ],
+  Array [
+    "PLUS",
+  ],
+  Array [
+    "IDENTIFIER",
+    "b",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "CLOSE_BRACE",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "IDENTIFIER",
+    "print",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "IDENTIFIER",
+    "add",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "IDENTIFIER",
+    "num",
+  ],
+  Array [
+    "COMMA",
+  ],
+  Array [
+    "NUMERIC_LITERAL",
+    "5",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_FUNC",
+  ],
+  Array [
+    "IDENTIFIER",
+    "inc",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "KEYWORD_MUT",
+  ],
+  Array [
+    "TYPE_INT32",
+  ],
+  Array [
+    "IDENTIFIER",
+    "a",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "COLON",
+  ],
+  Array [
+    "TYPE_VOID",
+  ],
+  Array [
+    "OPEN_BRACE",
+  ],
+  Array [
+    "IDENTIFIER",
+    "a",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "IDENTIFIER",
+    "a",
+  ],
+  Array [
+    "PLUS",
+  ],
+  Array [
+    "NUMERIC_LITERAL",
+    "1",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "CLOSE_BRACE",
+  ],
+  Array [
+    "KEYWORD_LET",
+  ],
+  Array [
+    "KEYWORD_MUT",
+  ],
+  Array [
+    "IDENTIFIER",
+    "num2",
+  ],
+  Array [
+    "ASSIGNMENT",
+  ],
+  Array [
+    "IDENTIFIER",
+    "num",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "IDENTIFIER",
+    "inc",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "IDENTIFIER",
+    "num2",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "KEYWORD_IF",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "IDENTIFIER",
+    "num2",
+  ],
+  Array [
+    "LESS_THAN_EQL",
+  ],
+  Array [
+    "NUMERIC_LITERAL",
+    "5",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "OPEN_BRACE",
+  ],
+  Array [
+    "IDENTIFIER",
+    "print",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "STRING_LITERAL",
+    "\\"less than or eql to five\\"",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "CLOSE_BRACE",
+  ],
+  Array [
+    "IDENTIFIER",
+    "print",
+  ],
+  Array [
+    "OPEN_PAREN",
+  ],
+  Array [
+    "IDENTIFIER",
+    "num2",
+  ],
+  Array [
+    "CLOSE_PAREN",
+  ],
+  Array [
+    "SEMICOLON",
+  ],
+  Array [
+    "EOF",
+  ],
+]
+`;
