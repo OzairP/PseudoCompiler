@@ -47,6 +47,8 @@ export const OPERATOR: Record<string, Token.Operator> = {
 	['*']: Token.Operator.MULTIPLY,
 	['/']: Token.Operator.DIVIDE,
 	['%']: Token.Operator.MODULO,
+	['&&']: Token.Operator.AND,
+	['||']: Token.Operator.OR,
 }
 
 export const PUNCTUATION: Record<string, Token.Punctuation> = {

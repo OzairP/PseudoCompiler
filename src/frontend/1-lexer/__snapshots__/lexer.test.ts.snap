@@ -3,173 +3,377 @@
 exports[`tokenizer matches snapshot 1`] = `
 Array [
   Array [
-    "SINGLE_LINE_COMMENT",
+    "SINGLE_COMMENT",
+    Array [
+      0,
+      21,
+    ],
     "// Sample single line",
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      22,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      26,
+      3,
+    ],
     "foo",
   ],
   Array [
-    "COLON",
+    "COLON_PNC",
+    Array [
+      29,
+      1,
+    ],
   ],
   Array [
-    "TYPE_STRING",
+    "STRING_TYPE",
+    Array [
+      31,
+      6,
+    ],
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      38,
+      1,
+    ],
   ],
   Array [
-    "STRING_LITERAL",
+    "STRING_LIT",
+    Array [
+      40,
+      7,
+    ],
     "\\"hello\\"",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      47,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      49,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      53,
+      2,
+    ],
     "pi",
   ],
   Array [
-    "COLON",
+    "COLON_PNC",
+    Array [
+      55,
+      1,
+    ],
   ],
   Array [
-    "TYPE_FLOAT32",
+    "FLOAT32_TYPE",
+    Array [
+      57,
+      3,
+    ],
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      61,
+      1,
+    ],
   ],
   Array [
-    "NUMERIC_LITERAL",
+    "FLOAT_LIT",
+    Array [
+      63,
+      4,
+    ],
     "3.14",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      67,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      69,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      73,
+      3,
+    ],
     "xyz",
   ],
   Array [
-    "COLON",
+    "COLON_PNC",
+    Array [
+      76,
+      1,
+    ],
   ],
   Array [
-    "TYPE_BOOL",
+    "BOOL_TYPE",
+    Array [
+      78,
+      4,
+    ],
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      83,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_TRUE",
+    "TRUE_KW",
+    Array [
+      85,
+      4,
+    ],
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      89,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      91,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      95,
+      3,
+    ],
     "zyx",
   ],
   Array [
-    "COLON",
+    "COLON_PNC",
+    Array [
+      98,
+      1,
+    ],
   ],
   Array [
-    "TYPE_BOOL",
+    "BOOL_TYPE",
+    Array [
+      100,
+      4,
+    ],
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      105,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_FALSE",
+    "FALSE_KW",
+    Array [
+      107,
+      5,
+    ],
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      112,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      114,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      118,
+      3,
+    ],
     "sqr",
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      122,
+      1,
+    ],
   ],
   Array [
-    "NUMERIC_LITERAL",
+    "NUMERIC_LIT",
+    Array [
+      124,
+      1,
+    ],
     "2",
   ],
   Array [
-    "EXPONENTIAL",
+    "EXPONENTIATION_OP",
+    Array [
+      126,
+      2,
+    ],
   ],
   Array [
-    "NUMERIC_LITERAL",
+    "NUMERIC_LIT",
+    Array [
+      129,
+      1,
+    ],
     "2",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      130,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      132,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      136,
+      9,
+    ],
     "sqrIsFour",
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      146,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      148,
+      3,
+    ],
     "sqr",
   ],
   Array [
-    "STRICT_COMP",
+    "STRICT_CMP_OP",
+    Array [
+      152,
+      3,
+    ],
   ],
   Array [
-    "NUMERIC_LITERAL",
+    "NUMERIC_LIT",
+    Array [
+      156,
+      1,
+    ],
     "4",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      157,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      159,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      163,
+      12,
+    ],
     "sqrIsFourish",
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      176,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      178,
+      3,
+    ],
     "sqr",
   ],
   Array [
-    "EQUALITY_COMP",
+    "EQUALITY_CMP_OP",
+    Array [
+      182,
+      2,
+    ],
   ],
   Array [
-    "STRING_LITERAL",
+    "STRING_LIT",
+    Array [
+      185,
+      3,
+    ],
     "\\"4\\"",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      188,
+      1,
+    ],
   ],
   Array [
-    "MULTI_LINE_COMMENT",
+    "MULTI_COMMENT",
+    Array [
+      191,
+      23,
+    ],
     "/*
 Sample
 Multi
@@ -177,329 +381,884 @@ Line
 */",
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      215,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      219,
+      3,
+    ],
     "bar",
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      223,
+      1,
+    ],
   ],
   Array [
-    "STRING_LITERAL",
+    "STRING_LIT",
+    Array [
+      225,
+      7,
+    ],
     "\\"world\\"",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      232,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      235,
+      5,
+    ],
     "print",
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      240,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      241,
+      3,
+    ],
     "foo",
   ],
   Array [
-    "PLUS",
+    "PLUS_OP",
+    Array [
+      245,
+      1,
+    ],
   ],
   Array [
-    "STRING_LITERAL",
+    "STRING_LIT",
+    Array [
+      247,
+      11,
+    ],
     "\\"
 awesome
 \\"",
   ],
   Array [
-    "PLUS",
+    "PLUS_OP",
+    Array [
+      259,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      261,
+      3,
+    ],
     "bar",
   ],
   Array [
-    "CLOSE_PAREN",
+    "C_PAREN_PNC",
+    Array [
+      264,
+      1,
+    ],
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      265,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      268,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      272,
+      3,
+    ],
     "num",
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      276,
+      1,
+    ],
   ],
   Array [
-    "NUMERIC_LITERAL",
+    "NUMERIC_LIT",
+    Array [
+      278,
+      1,
+    ],
     "0",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      279,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      282,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      286,
+      3,
+    ],
     "add",
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      290,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_FUNC",
+    "FUNC_KW",
+    Array [
+      292,
+      4,
+    ],
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      297,
+      1,
+    ],
   ],
   Array [
-    "TYPE_INT32",
+    "INT32_TYPE",
+    Array [
+      298,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      302,
+      1,
+    ],
     "a",
   ],
   Array [
-    "COMMA",
+    "COMMA_PNC",
+    Array [
+      303,
+      1,
+    ],
   ],
   Array [
-    "TYPE_INT32",
+    "INT32_TYPE",
+    Array [
+      305,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      309,
+      1,
+    ],
     "b",
   ],
   Array [
-    "CLOSE_PAREN",
+    "C_PAREN_PNC",
+    Array [
+      310,
+      1,
+    ],
   ],
   Array [
-    "COLON",
+    "COLON_PNC",
+    Array [
+      311,
+      1,
+    ],
   ],
   Array [
-    "TYPE_INT32",
+    "INT32_TYPE",
+    Array [
+      313,
+      3,
+    ],
   ],
   Array [
-    "OPEN_BRACE",
+    "O_BRACE_PNC",
+    Array [
+      317,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_RETURN",
+    "RETURN_KW",
+    Array [
+      320,
+      6,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      327,
+      1,
+    ],
     "a",
   ],
   Array [
-    "PLUS",
+    "PLUS_OP",
+    Array [
+      329,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      331,
+      1,
+    ],
     "b",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      332,
+      1,
+    ],
   ],
   Array [
-    "CLOSE_BRACE",
+    "C_BRACE_PNC",
+    Array [
+      334,
+      1,
+    ],
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      335,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      338,
+      5,
+    ],
     "print",
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      343,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      344,
+      3,
+    ],
     "add",
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      347,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      348,
+      3,
+    ],
     "num",
   ],
   Array [
-    "COMMA",
+    "COMMA_PNC",
+    Array [
+      351,
+      1,
+    ],
   ],
   Array [
-    "NUMERIC_LITERAL",
+    "NUMERIC_LIT",
+    Array [
+      353,
+      1,
+    ],
     "5",
   ],
   Array [
-    "CLOSE_PAREN",
+    "C_PAREN_PNC",
+    Array [
+      354,
+      1,
+    ],
   ],
   Array [
-    "CLOSE_PAREN",
+    "C_PAREN_PNC",
+    Array [
+      355,
+      1,
+    ],
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      356,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_FUNC",
+    "FUNC_KW",
+    Array [
+      359,
+      4,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      364,
+      3,
+    ],
     "inc",
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      368,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_MUT",
+    "MUT_KW",
+    Array [
+      369,
+      3,
+    ],
   ],
   Array [
-    "TYPE_INT32",
+    "INT32_TYPE",
+    Array [
+      373,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      377,
+      1,
+    ],
     "a",
   ],
   Array [
-    "CLOSE_PAREN",
+    "C_PAREN_PNC",
+    Array [
+      378,
+      1,
+    ],
   ],
   Array [
-    "COLON",
+    "COLON_PNC",
+    Array [
+      379,
+      1,
+    ],
   ],
   Array [
-    "TYPE_VOID",
+    "VOID_TYPE",
+    Array [
+      381,
+      4,
+    ],
   ],
   Array [
-    "OPEN_BRACE",
+    "O_BRACE_PNC",
+    Array [
+      386,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      389,
+      1,
+    ],
     "a",
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      391,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      393,
+      1,
+    ],
     "a",
   ],
   Array [
-    "PLUS",
+    "PLUS_OP",
+    Array [
+      395,
+      1,
+    ],
   ],
   Array [
-    "NUMERIC_LITERAL",
+    "NUMERIC_LIT",
+    Array [
+      397,
+      1,
+    ],
     "1",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      398,
+      1,
+    ],
   ],
   Array [
-    "CLOSE_BRACE",
+    "C_BRACE_PNC",
+    Array [
+      400,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_LET",
+    "LET_KW",
+    Array [
+      403,
+      3,
+    ],
   ],
   Array [
-    "KEYWORD_MUT",
+    "MUT_KW",
+    Array [
+      407,
+      3,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      411,
+      4,
+    ],
     "num2",
   ],
   Array [
-    "ASSIGNMENT",
+    "ASSIGN_OP",
+    Array [
+      416,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      418,
+      3,
+    ],
     "num",
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      421,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      423,
+      3,
+    ],
     "inc",
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      426,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      427,
+      4,
+    ],
     "num2",
   ],
   Array [
-    "CLOSE_PAREN",
+    "C_PAREN_PNC",
+    Array [
+      431,
+      1,
+    ],
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      432,
+      1,
+    ],
   ],
   Array [
-    "KEYWORD_IF",
+    "IF_KW",
+    Array [
+      435,
+      2,
+    ],
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      438,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      439,
+      4,
+    ],
     "num2",
   ],
   Array [
-    "LESS_THAN_EQL",
+    "LESS_THAN_EQL_OP",
+    Array [
+      444,
+      2,
+    ],
   ],
   Array [
-    "NUMERIC_LITERAL",
+    "NUMERIC_LIT",
+    Array [
+      447,
+      1,
+    ],
     "5",
   ],
   Array [
-    "CLOSE_PAREN",
+    "OR_OP",
+    Array [
+      449,
+      2,
+    ],
   ],
   Array [
-    "OPEN_BRACE",
+    "FALSE_KW",
+    Array [
+      452,
+      5,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "C_PAREN_PNC",
+    Array [
+      457,
+      1,
+    ],
+  ],
+  Array [
+    "O_BRACE_PNC",
+    Array [
+      459,
+      1,
+    ],
+  ],
+  Array [
+    "IDENTIFIER_SYM",
+    Array [
+      462,
+      5,
+    ],
     "print",
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      467,
+      1,
+    ],
   ],
   Array [
-    "STRING_LITERAL",
+    "STRING_LIT",
+    Array [
+      468,
+      26,
+    ],
     "\\"less than or eql to five\\"",
   ],
   Array [
-    "CLOSE_PAREN",
+    "C_PAREN_PNC",
+    Array [
+      494,
+      1,
+    ],
   ],
   Array [
-    "SEMICOLON",
+    "SEMI_PNC",
+    Array [
+      495,
+      1,
+    ],
   ],
   Array [
-    "CLOSE_BRACE",
+    "C_BRACE_PNC",
+    Array [
+      497,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
-    "print",
+    "ELIF_KW",
+    Array [
+      499,
+      4,
+    ],
   ],
   Array [
-    "OPEN_PAREN",
+    "O_PAREN_PNC",
+    Array [
+      504,
+      1,
+    ],
   ],
   Array [
-    "IDENTIFIER",
+    "IDENTIFIER_SYM",
+    Array [
+      505,
+      4,
+    ],
     "num2",
   ],
   Array [
-    "CLOSE_PAREN",
+    "STRICT_CMP_OP",
+    Array [
+      510,
+      3,
+    ],
   ],
   Array [
-    "SEMICOLON",
+    "NUMERIC_LIT",
+    Array [
+      514,
+      1,
+    ],
+    "7",
   ],
   Array [
-    "EOF",
+    "AND_OP",
+    Array [
+      516,
+      2,
+    ],
+  ],
+  Array [
+    "TRUE_KW",
+    Array [
+      519,
+      4,
+    ],
+  ],
+  Array [
+    "C_PAREN_PNC",
+    Array [
+      523,
+      1,
+    ],
+  ],
+  Array [
+    "O_BRACE_PNC",
+    Array [
+      525,
+      1,
+    ],
+  ],
+  Array [
+    "IDENTIFIER_SYM",
+    Array [
+      528,
+      5,
+    ],
+    "print",
+  ],
+  Array [
+    "O_PAREN_PNC",
+    Array [
+      533,
+      1,
+    ],
+  ],
+  Array [
+    "STRING_LIT",
+    Array [
+      534,
+      11,
+    ],
+    "\\"exactly 7\\"",
+  ],
+  Array [
+    "C_PAREN_PNC",
+    Array [
+      545,
+      1,
+    ],
+  ],
+  Array [
+    "C_BRACE_PNC",
+    Array [
+      547,
+      1,
+    ],
+  ],
+  Array [
+    "ELSE_KW",
+    Array [
+      549,
+      4,
+    ],
+  ],
+  Array [
+    "O_BRACE_PNC",
+    Array [
+      554,
+      1,
+    ],
+  ],
+  Array [
+    "IDENTIFIER_SYM",
+    Array [
+      557,
+      5,
+    ],
+    "print",
+  ],
+  Array [
+    "O_PAREN_PNC",
+    Array [
+      562,
+      1,
+    ],
+  ],
+  Array [
+    "STRING_LIT",
+    Array [
+      563,
+      9,
+    ],
+    "\\"neither\\"",
+  ],
+  Array [
+    "C_PAREN_PNC",
+    Array [
+      572,
+      1,
+    ],
+  ],
+  Array [
+    "C_BRACE_PNC",
+    Array [
+      574,
+      1,
+    ],
+  ],
+  Array [
+    "IDENTIFIER_SYM",
+    Array [
+      577,
+      5,
+    ],
+    "print",
+  ],
+  Array [
+    "O_PAREN_PNC",
+    Array [
+      582,
+      1,
+    ],
+  ],
+  Array [
+    "IDENTIFIER_SYM",
+    Array [
+      583,
+      4,
+    ],
+    "num2",
+  ],
+  Array [
+    "C_PAREN_PNC",
+    Array [
+      587,
+      1,
+    ],
+  ],
+  Array [
+    "SEMI_PNC",
+    Array [
+      588,
+      1,
+    ],
+  ],
+  Array [
+    "EOF_SYM",
+    Array [
+      589,
+      0,
+    ],
   ],
 ]
 `;

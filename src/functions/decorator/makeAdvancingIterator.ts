@@ -9,20 +9,20 @@ export interface AdvancingIterator<T> {
 export function makeAdvancingIterator<T, I extends Iterator<T> & PeekingIterator<T>>(
 	iterator: I
 ): AdvancingIterator<T> & I {
-	return Object.defineProperties(iterator, {
-		advanceUntil: {
-			value(predicate: PeekingPredicate<T>): Array<T> {
-				let result: T | undefined = iterator.peek()
-				const buffer: Array<T> = []
-				const peeker = (x: number = 1) => iterator.peek(x + 1)
+	return {
+		...iterator,
 
-				while (!predicate(result, peeker)) {
-					buffer.push(iterator.next().value)
-					result = iterator.peek()
-				}
+		advanceUntil(predicate: PeekingPredicate<T>): Array<T> {
+			let result: T | undefined = iterator.peek.bind(this)()
+			const buffer: Array<T> = []
+			const peeker = (x: number = 1) => iterator.peek.bind(this)(x + 1)
 
-				return buffer
-			},
+			while (!predicate(result, peeker)) {
+				buffer.push(iterator.next.bind(this)().value)
+				result = iterator.peek.bind(this)()
+			}
+
+			return buffer
 		},
-	})
+	}
 }

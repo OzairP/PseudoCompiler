@@ -1,6 +1,5 @@
 import { readFileSync } from 'fs'
 import { join } from 'path'
-import { SyntaxError } from '../SyntaxError'
 import { lex } from './lexer'
 
 describe('tokenizer', () => {
@@ -14,6 +13,11 @@ describe('tokenizer', () => {
 	test('throws error for unexpected character', () => {
 		const code = `~`
 
-		expect(() => Array.from(lex(code))).toThrow(SyntaxError)
+		expect(() => Array.from(lex(code))).toThrow('Unexpected token')
+	})
+
+	test('EOF token location works with empty file', () => {
+		const tokens = Array.from(lex(''))
+		expect(tokens).toMatchObject([['EOF_SYM', [0, 0]]])
 	})
 })

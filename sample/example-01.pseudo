@@ -33,8 +33,12 @@ func inc (mut i32 a): void {
 let mut num2 = num;
 inc(num2);
 
-if(num2 <= 5) {
+if (num2 <= 5 || false) {
 	print("less than or eql to five");
+} elif (num2 === 7 && true) {
+	print("exactly 7")
+} else {
+	print("neither")
 }
 
 print(num2);

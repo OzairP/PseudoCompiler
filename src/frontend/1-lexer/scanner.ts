@@ -1,16 +1,15 @@
-import { AdvancingIterator, makeAdvancingIterator } from '../../functions/decorator/makeAdvancingIterator'
+import { makeAdvancingIterator } from '../../functions/decorator/makeAdvancingIterator'
 import { makePeekingIterator, PeekingIterator } from '../../functions/decorator/makePeekingIterator'
-import { makeTrackingIterator, TrackingIterator } from '../../functions/decorator/makeTrackingIterator'
 import * as Lang from '../../language'
 import { SyntaxError } from '../SyntaxError'
 
-export type Lexeme = string
+export type Location = [number, number]
+export type Lexeme = [string, Location]
 
 export function* scan(characterIterator: Iterator<string>): IterableIterator<Lexeme> {
-	const characters: AdvancingIterator<string> &
-		PeekingIterator<string> &
-		TrackingIterator &
-		Iterator<string> = makeAdvancingIterator(makePeekingIterator(makeTrackingIterator(characterIterator)))
+	const characters = makeAdvancingIterator<string, PeekingIterator<string> & Iterator<string>>(
+		makePeekingIterator<string, Iterator<string>>(characterIterator)
+	)
 
 	let result
 
@@ -30,46 +29,77 @@ export function* scan(characterIterator: Iterator<string>): IterableIterator<Lex
 
 		// Single line comment
 		if (char === '/' && characters.peek() === '/') {
-			yield char + characters.advanceUntil(val => val === '\n').join('')
+			const start = characters.iteration
+			const lexeme = char + characters.advanceUntil(val => val === '\n').join('')
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
 		// Multiline comment
 		if (char === '/' && characters.peek() === '*') {
-			yield char +
+			const start = characters.iteration
+			const lexeme =
+				char +
 				characters.advanceUntil((val, peek) => val === '*' && peek() === '/').join('') +
 				characters.next().value +
 				characters.next().value
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
 		// Punctuator
 		if (Object.keys(Lang.Lexeme.PUNCTUATION).includes(char)) {
-			yield char
+			const start = characters.iteration
+			const lexeme = char
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
 		// LTE and GTE operator
 		if ((char === '<' || char === '>') && characters.peek() === '=') {
-			yield char + characters.next().value
+			const start = characters.iteration
+			const lexeme = char + characters.next().value
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
 		// Strict equality check
 		if (char === '=' && characters.peek() === '=' && characters.peek(2) === '=') {
-			yield char + characters.next().value + characters.next().value
+			const start = characters.iteration
+			const lexeme = char + characters.next().value + characters.next().value
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
 		// Loose equality check
 		if (char === '=' && characters.peek() === '=') {
-			yield char + characters.next().value
+			const start = characters.iteration
+			const lexeme = char + characters.next().value
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
 		// Exponential operator
 		if (char === '*' && characters.peek() === '*') {
-			yield char + characters.next().value
+			const start = characters.iteration
+			const lexeme = char + characters.next().value
+			yield [lexeme, [start, lexeme.length]]
+			continue
+		}
+
+		// And operator
+		if (char === '&' && characters.peek() === '&') {
+			const start = characters.iteration
+			const lexeme = char + characters.next().value
+			yield [lexeme, [start, lexeme.length]]
+			continue
+		}
+
+		// Or operator
+		if (char === '|' && characters.peek() === '|') {
+			const start = characters.iteration
+			const lexeme = char + characters.next().value
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
@@ -79,25 +109,33 @@ export function* scan(characterIterator: Iterator<string>): IterableIterator<Lex
 				.filter(o => o.length === 1)
 				.includes(char)
 		) {
-			yield char
+			const start = characters.iteration
+			const lexeme = char
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
 		// String literal
 		if (char === '"') {
-			yield char + characters.advanceUntil(val => val === '"').join('') + characters.next().value
+			const start = characters.iteration
+			const lexeme = char + characters.advanceUntil(val => val === '"').join('') + characters.next().value
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
-		// Number literal
+		// Numeric/Float literal
 		if (NUMBERS.includes(char)) {
-			yield char + characters.advanceUntil(val => !NUMBERS.includes(val!) && val !== '.').join('')
+			const start = characters.iteration
+			const lexeme = char + characters.advanceUntil(val => !NUMBERS.includes(val!) && val !== '.').join('')
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
 		// Word
 		if (LETTERS.includes(char)) {
-			yield char + characters.advanceUntil(val => !ALPHANUMERIC_UNDERSCORE.includes(val!)).join('')
+			const start = characters.iteration
+			const lexeme = char + characters.advanceUntil(val => !ALPHANUMERIC_UNDERSCORE.includes(val!)).join('')
+			yield [lexeme, [start, lexeme.length]]
 			continue
 		}
 
