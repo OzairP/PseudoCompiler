@@ -2,7 +2,7 @@ import { makeLookBackIterator } from '../../functions/decorator/makeLookBackIter
 import * as Lang from '../../language'
 import { Lexeme, Location } from './scanner'
 
-export type Token = [Lang.Token.TokenKind, Location, string?]
+export type Token<K = Lang.Token.TokenKind> = [K, Location, string?]
 
 export function * tokenize (lexemeStream: Iterator<Lexeme>): IterableIterator<Token> {
 	const lexemes = makeLookBackIterator(lexemeStream)
