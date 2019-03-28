@@ -20,16 +20,6 @@ export function * tokenize (lexemeStream: Iterator<Lexeme>): IterableIterator<To
 
 		const [lexeme, location] = result.value
 
-		if (lexeme.startsWith('//')) {
-			yield [Lang.Token.Comment.SINGLE, location, lexeme]
-			continue
-		}
-
-		if (lexeme.startsWith('/*')) {
-			yield [Lang.Token.Comment.MULTI, location, lexeme]
-			continue
-		}
-
 		if (Lang.Lexeme.PUNCTUATION[lexeme]) {
 			yield [Lang.Lexeme.PUNCTUATION[lexeme], location]
 			continue

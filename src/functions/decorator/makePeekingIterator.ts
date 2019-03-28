@@ -3,7 +3,7 @@ export interface PeekingIterator<T> {
 	peek(distance?: number, value?: any): T | undefined
 }
 
-export function makePeekingIterator<T, I extends Iterator<T>>(iterator: I): PeekingIterator<T> & I {
+export function makePeekingIterator<T, I extends Iterator<T> = Iterator<T>>(iterator: I): PeekingIterator<T> & I {
 	const buffer: Array<IteratorResult<T>> = []
 
 	return {

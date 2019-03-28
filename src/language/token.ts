@@ -1,78 +1,73 @@
-export type TokenKind = Type | Keyword | Operator | Punctuation | Literal | Comment | Symbolic
+export type TokenKind = Type | Keyword | Operator | Punctuation | Literal | Symbolic
 
 export enum Type {
-	VOID = 'VOID_TYPE',
-	BOOL = 'BOOL_TYPE',
-	STRING = 'STRING_TYPE',
+	VOID = 'void_type',
+	BOOL = 'bool_type',
+	STRING = 'string_type',
 
-	INT8 = 'INT8_TYPE',
-	INT16 = 'INT16_TYPE',
-	INT32 = 'INT32_TYPE',
-	INT64 = 'INT64_TYPE',
-	INT128 = 'INT128_TYPE',
+	INT8 = 'int8_type',
+	INT16 = 'int16_type',
+	INT32 = 'int32_type',
+	INT64 = 'int64_type',
+	INT128 = 'int128_type',
 
-	UINT8 = 'UINT8_TYPE',
-	UINT16 = 'UINT16_TYPE',
-	UINT32 = 'UINT32_TYPE',
-	UINT64 = 'UINT64_TYPE',
-	UINT128 = 'UINT128_TYPE',
+	UINT8 = 'uint8_type',
+	UINT16 = 'uint16_type',
+	UINT32 = 'uint32_type',
+	UINT64 = 'uint64_type',
+	UINT128 = 'uint128_type',
 
-	FLOAT32 = 'FLOAT32_TYPE',
-	FLOAT64 = 'FLOAT64_TYPE',
+	FLOAT32 = 'float32_type',
+	FLOAT64 = 'float64_type',
 }
 
 export enum Keyword {
-	LET = 'LET_KW',
-	MUT = 'MUT_KW',
-	FUNC = 'FUNC_KW',
-	RETURN = 'RETURN_KW',
-	IF = 'IF_KW',
-	ELIF = 'ELIF_KW',
-	ELSE = 'ELSE_KW',
-	TRUE = 'TRUE_KW',
-	FALSE = 'FALSE_KW',
+	LET = 'let_kw',
+	MUT = 'mut_kw',
+	FUNC = 'func_kw',
+	RETURN = 'return_kw',
+	IF = 'if_kw',
+	ELIF = 'elif_kw',
+	ELSE = 'else_kw',
+	TRUE = 'true_kw',
+	FALSE = 'false_kw',
 }
 
 export enum Operator {
-	STRICT_COMP = 'STRICT_CMP_OP',
-	EQUALITY_COMP = 'EQUALITY_CMP_OP',
-	LESS_THAN_EQL = 'LESS_THAN_EQL_OP',
-	GREATER_THAN_EQL = 'GREATER_THAN_EQL_OP',
-	LESS_THAN = 'LESS_THAN_OP',
-	GREATER_THAN = 'GREATER_THAN_OP',
-	EXPONENTIAL = 'EXPONENTIATION_OP',
-	ASSIGNMENT = 'ASSIGN_OP',
-	PLUS = 'PLUS_OP',
-	MINUS = 'MINUS_OP',
-	MULTIPLY = 'MULTIPLY_OP',
-	DIVIDE = 'DIVIDE_OP',
-	MODULO = 'MODULO_OP',
-	AND = 'AND_OP',
-	OR = 'OR_OP',
+	STRICT_COMP = 'strict_cmp_op',
+	EQUALITY_COMP = 'equality_cmp_op',
+	LESS_THAN_EQL = 'less_than_eql_op',
+	GREATER_THAN_EQL = 'greater_than_eql_op',
+	LESS_THAN = 'less_than_op',
+	GREATER_THAN = 'greater_than_op',
+	EXPONENTIAL = 'exponentiation_op',
+	ASSIGNMENT = 'assign_op',
+	PLUS = 'plus_op',
+	MINUS = 'minus_op',
+	MULTIPLY = 'multiply_op',
+	DIVIDE = 'divide_op',
+	MODULO = 'modulo_op',
+	AND = 'and_op',
+	OR = 'or_op',
 }
 
 export enum Punctuation {
-	SEMICOLON = 'SEMI_PNC',
-	COLON = 'COLON_PNC',
-	COMMA = 'COMMA_PNC',
-	OPEN_BRACE = 'O_BRACE_PNC',
-	CLOSE_BRACE = 'C_BRACE_PNC',
-	OPEN_PAREN = 'O_PAREN_PNC',
-	CLOSE_PAREN = 'C_PAREN_PNC',
+	SEMICOLON = 'semi_pnc',
+	COLON = 'colon_pnc',
+	COMMA = 'comma_pnc',
+	OPEN_BRACE = 'o_brace_pnc',
+	CLOSE_BRACE = 'c_brace_pnc',
+	OPEN_PAREN = 'o_paren_pnc',
+	CLOSE_PAREN = 'c_paren_pnc',
 }
 
 export enum Literal {
-	STRING = 'STRING_LIT',
-	NUMERIC = 'NUMERIC_LIT',
-	FLOAT = 'FLOAT_LIT',
-}
-
-export enum Comment {
-	SINGLE = 'SINGLE_COMMENT',
-	MULTI = 'MULTI_COMMENT',
+	STRING = 'string_lit',
+	NUMERIC = 'numeric_lit',
+	FLOAT = 'float_lit',
 }
 
 export enum Symbolic {
-	IDENTIFIER = 'IDENTIFIER_SYM',
-	EOF = 'EOF_SYM',
+	IDENTIFIER = 'identifier_sym',
+	EOF = 'eof_sym',
 }

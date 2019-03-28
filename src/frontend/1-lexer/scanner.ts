@@ -29,21 +29,15 @@ export function* scan(characterIterator: Iterator<string>): IterableIterator<Lex
 
 		// Single line comment
 		if (char === '/' && characters.peek() === '/') {
-			const start = characters.iteration
-			const lexeme = char + characters.advanceUntil(val => val === '\n').join('')
-			yield [lexeme, [start, lexeme.length]]
+			characters.advanceUntil(val => val === '\n')
 			continue
 		}
 
 		// Multiline comment
 		if (char === '/' && characters.peek() === '*') {
-			const start = characters.iteration
-			const lexeme =
-				char +
-				characters.advanceUntil((val, peek) => val === '*' && peek() === '/').join('') +
-				characters.next().value +
-				characters.next().value
-			yield [lexeme, [start, lexeme.length]]
+			characters.advanceUntil((val, peek) => val === '*' && peek() === '/')
+			characters.next()
+			characters.next()
 			continue
 		}
 
