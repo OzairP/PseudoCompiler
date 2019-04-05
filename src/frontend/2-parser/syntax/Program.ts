@@ -1,6 +1,6 @@
-import { Node, Kind } from './Node'
 import { Production } from '../transitions'
 import { Block } from './Block'
+import { Kind, Node } from './Node'
 import { Statement } from './statement'
 
 export class Program extends Node<Kind.Program> {

@@ -1,5 +1,6 @@
 export interface PeekingIterator<T> {
 	iteration: number
+
 	peek(distance?: number, value?: any): T | undefined
 }
 

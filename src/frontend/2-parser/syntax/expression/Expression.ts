@@ -1,5 +1,5 @@
 import { Production } from '../../transitions'
-import { Node, Kind } from '../Node'
+import { Kind, Node } from '../Node'
 
 export type ExpressionKind =
 	| Kind.Expression

@@ -78,7 +78,7 @@ export function createCodeWindow(lines: Array<string>, line: number, column: num
 	const errorTick = framer({
 		line: chalk`${errorTickPad}{bold.redBright ${errorTicks}}`,
 		// @ts-ignore
-		lineNum: ''
+		lineNum: '',
 	})
 	return (
 		linesAbove.map(framer).join('') +

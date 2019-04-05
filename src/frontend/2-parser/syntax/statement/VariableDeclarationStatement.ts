@@ -2,8 +2,8 @@ import { Production } from '../../transitions'
 import { Expression } from '../expression'
 import { Identifier } from '../Identifier'
 import { Kind } from '../Node'
-import { Statement } from './Statement'
 import { Type } from '../Type'
+import { Statement } from './Statement'
 
 export class VariableDeclarationStatement extends Statement<Kind.VariableDeclarationStatement> {
 	constructor(

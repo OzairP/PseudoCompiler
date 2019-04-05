@@ -1,8 +1,8 @@
 import * as Lang from '../../../../language'
 import { Production } from '../../transitions'
-import { Expression } from './Expression'
 import { Kind } from '../Node'
 import { BinaryOperationExpression } from './BinaryOperationExpression'
+import { Expression } from './Expression'
 
 export class BinaryOperationExpressionTail extends Expression<Kind.BinaryOperationExpression> {
 	constructor(start: number, width: number, public operator: Lang.Token.Operator, public rhs: Expression) {

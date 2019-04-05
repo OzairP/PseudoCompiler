@@ -1,7 +1,7 @@
-import * as Lang from '../../language'
-import { SyntaxError } from '../SyntaxError'
 import { makeAdvancingIterator } from '../../functions/decorator/makeAdvancingIterator'
 import { makePeekingIterator, PeekingIterator } from '../../functions/decorator/makePeekingIterator'
+import * as Lang from '../../language'
+import { SyntaxError } from '../SyntaxError'
 
 export interface Locatable {
 	start: number

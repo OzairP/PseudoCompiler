@@ -1,4 +1,4 @@
-import { Node, Kind } from '../Node'
+import { Kind, Node } from '../Node'
 
 type StatementKind =
 	| Kind.VariableDeclarationStatement

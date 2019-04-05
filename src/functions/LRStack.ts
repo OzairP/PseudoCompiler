@@ -15,6 +15,9 @@ export class LRStack<T, E = number | T> {
 
 	public lastState(): number {
 		// @ts-ignore
-		return this.stack.slice().reverse().find(x => typeof x === 'number')
+		return this.stack
+			.slice()
+			.reverse()
+			.find(x => typeof x === 'number')
 	}
 }

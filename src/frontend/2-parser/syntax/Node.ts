@@ -44,12 +44,7 @@ export enum Kind {
 export class Node<K extends Kind> implements Token<Production> {
 	public content?: string
 
-	constructor(
-		public kind: K,
-		public token: Production,
-		public start: number,
-		public width: number,
-	) {}
+	constructor(public kind: K, public token: Production, public start: number, public width: number) {}
 }
 
 export interface Value<T = string> {

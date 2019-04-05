@@ -10,7 +10,7 @@ type Transition = [Action, State]
 type TransitionTable = Array<Array<null | Transition>>
 
 export enum Production {
-	"PROGRAM'" = 'PROGRAM\'',
+	"PROGRAM'" = "PROGRAM'",
 	PROGRAM = 'PROGRAM',
 	BLOCK = 'BLOCK',
 	STMT = 'STMT',

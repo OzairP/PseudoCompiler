@@ -74,7 +74,6 @@ export function* tokenize(lexemeStream: Iterator<Lexeme>): IterableIterator<Toke
 
 		if (65 <= content.toUpperCase().charCodeAt(0) && content.toUpperCase().charCodeAt(0) <= 90) {
 			yield { token: Lang.Token.Symbolic.IDENTIFIER, start, width, content }
-			continue
 		}
 	} while (!result.done)
 }
