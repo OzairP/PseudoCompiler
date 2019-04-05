@@ -1,10 +1,13 @@
 import { makeLookBackIterator } from '../../functions/decorator/makeLookBackIterator'
 import * as Lang from '../../language'
-import { Lexeme, Location } from './scanner'
+import { Lexeme, Locatable } from './scanner'
 
-export type Token<K = Lang.Token.TokenKind> = [K, Location, string?]
+export interface Token<K = Lang.Token.TokenKind> extends Locatable {
+	token: K
+	content?: string
+}
 
-export function * tokenize (lexemeStream: Iterator<Lexeme>): IterableIterator<Token> {
+export function* tokenize(lexemeStream: Iterator<Lexeme>): IterableIterator<Token> {
 	const lexemes = makeLookBackIterator(lexemeStream)
 
 	let result: IteratorResult<Lexeme> | undefined
@@ -13,59 +16,64 @@ export function * tokenize (lexemeStream: Iterator<Lexeme>): IterableIterator<To
 		result = lexemes.next()
 
 		if (result.done) {
-			const [, [start, end]] = lexemes.last && lexemes.last ? lexemes.last.value : [undefined, [0, 0]]
-			yield [Lang.Token.Symbolic.EOF, [start + end, 0]]
+			const { start = 0, width = 0 } = lexemes.last && lexemes.last ? lexemes.last.value : {}
+			yield {
+				token: Lang.Token.Symbolic.EOF,
+				start: start + width,
+				width: 0,
+			}
 			return
 		}
 
-		const [lexeme, location] = result.value
+		const { content, start, width } = result.value
 
-		if (Lang.Lexeme.PUNCTUATION[lexeme]) {
-			yield [Lang.Lexeme.PUNCTUATION[lexeme], location]
+		if (Lang.Lexeme.PUNCTUATION[content]) {
+			yield { token: Lang.Lexeme.PUNCTUATION[content], start, width }
 			continue
 		}
 
-		if (Lang.Lexeme.OPERATOR[lexeme]) {
-			yield [Lang.Lexeme.OPERATOR[lexeme], location]
+		if (Lang.Lexeme.OPERATOR[content]) {
+			yield { token: Lang.Lexeme.OPERATOR[content], start, width }
 			continue
 		}
 
-		if (Lang.Lexeme.TYPE[lexeme]) {
-			yield [Lang.Lexeme.TYPE[lexeme], location]
+		if (Lang.Lexeme.TYPE[content]) {
+			yield { token: Lang.Lexeme.TYPE[content], start, width }
 			continue
 		}
 
-		if (lexeme === 'true') {
-			yield [Lang.Token.Keyword.TRUE, location]
+		if (content === 'true') {
+			yield { token: Lang.Token.Keyword.TRUE, start, width }
 			continue
 		}
 
-		if (lexeme === 'false') {
-			yield [Lang.Token.Keyword.FALSE, location]
+		if (content === 'false') {
+			yield { token: Lang.Token.Keyword.FALSE, start, width }
 			continue
 		}
 
-		if (Lang.Lexeme.KEYWORD[lexeme]) {
-			yield [Lang.Lexeme.KEYWORD[lexeme], location]
+		if (Lang.Lexeme.KEYWORD[content]) {
+			yield { token: Lang.Lexeme.KEYWORD[content], start, width }
 			continue
 		}
 
-		if (lexeme.startsWith('"')) {
-			yield [Lang.Token.Literal.STRING, location, lexeme]
+		if (content.startsWith('"')) {
+			yield { token: Lang.Token.Literal.STRING, start, width, content }
 			continue
 		}
 
-		if (!isNaN(Number.parseFloat(lexeme))) {
-			if (lexeme.includes('.')) {
-				yield [Lang.Token.Literal.FLOAT, location, lexeme]
-			} else {
-				yield [Lang.Token.Literal.NUMERIC, location, lexeme]
+		if (!isNaN(Number.parseFloat(content))) {
+			yield {
+				token: content.includes('.') ? Lang.Token.Literal.FLOAT : Lang.Token.Literal.NUMERIC,
+				start,
+				width,
+				content,
 			}
 			continue
 		}
 
-		if (65 <= lexeme.toUpperCase().charCodeAt(0) && lexeme.toUpperCase().charCodeAt(0) <= 90) {
-			yield [Lang.Token.Symbolic.IDENTIFIER, location, lexeme]
+		if (65 <= content.toUpperCase().charCodeAt(0) && content.toUpperCase().charCodeAt(0) <= 90) {
+			yield { token: Lang.Token.Symbolic.IDENTIFIER, start, width, content }
 			continue
 		}
 	} while (!result.done)

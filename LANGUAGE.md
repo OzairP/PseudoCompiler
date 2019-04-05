@@ -76,7 +76,7 @@ These types are defined in `/src/language/token.ts`.
 | Suffix | Token Type |
 | ------ | ---------- |
 | `_TYPE` | Data type keyword |
-| `_KW` | Keyword |
+| `_KW` | Type |
 | `_OP` | Operator |
 | `_PNC` | Punctuation |
 | `_LIT` | Literal |

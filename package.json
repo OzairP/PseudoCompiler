@@ -7,7 +7,7 @@
 	"author": "Ozair Patel <ozairpatel2@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"build": "tsc",
+		"build": "rm -rf ./build && tsc",
 		"start": "node ./build",
 		"test": "jest",
 		"lint": "tslint -p .",

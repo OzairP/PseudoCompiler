@@ -9,6 +9,36 @@ type State = number
 type Transition = [Action, State]
 type TransitionTable = Array<Array<null | Transition>>
 
+export enum Production {
+	"PROGRAM'" = 'PROGRAM\'',
+	PROGRAM = 'PROGRAM',
+	BLOCK = 'BLOCK',
+	STMT = 'STMT',
+	EXPR = 'EXPR',
+	PAREND_EXPR = 'PAREND_EXPR',
+	IDEN = 'IDEN',
+	TYPE = 'TYPE',
+	VAR_DEC_STMT = 'VAR_DEC_STMT',
+	IF_STMT = 'IF_STMT',
+	ELSE_STMT = 'ELSE_STMT',
+	ELIF_STMT = 'ELIF_STMT',
+	COND_STMT = 'COND_STMT',
+	RETURN_STMT = 'RETURN_STMT',
+	FUNC_DEC_STMT = 'FUNC_DEC_STMT',
+	FUNC_EXPR = 'FUNC_EXPR',
+	PARAMS = 'PARAMS',
+	PARAM = 'PARAM',
+	IMMUT_PARAM = 'IMMUT_PARAM',
+	MUT_PARAM = 'MUT_PARAM',
+	PARAM_TAIL = 'PARAM_TAIL',
+	ASSIGN_EXPR = 'ASSIGN_EXPR',
+	CALL_EXPR = 'CALL_EXPR',
+	ARGS = 'ARGS',
+	ARG_TAIL = 'ARG_TAIL',
+	BIN_OP_EXPR = 'BIN_OP_EXPR',
+	BIN_OP_EXPR_TAIL = 'BIN_OP_EXPR_TAIL',
+}
+
 export const reduction = `
 PROGRAM' -> PROGRAM
 PROGRAM -> BLOCK eof_sym
