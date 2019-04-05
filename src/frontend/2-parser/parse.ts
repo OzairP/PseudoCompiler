@@ -31,7 +31,7 @@ export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 		// Get the transition via the current state and input column
 		const transition = transitions[state][input]
 
-		console.log(JSON.stringify(stack.stack.filter<LRStackSymbol>(isSymbol)))
+		console.log(JSON.stringify(stack.stack.filter<LRStackSymbol>(isSymbol).map(x => x.token)))
 
 		// No such transition
 		if (transition === null) {
@@ -67,9 +67,10 @@ export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 			const poppedWidth = lastPoppedToken.start + lastPoppedToken.width - poppedTokens[0].start
 
 			stack.push(
-				production in reducer
-					? reducer[production as Production](poppedTokens, poppedWidth)
-					: {
+				// production in reducer
+				// 	? reducer[production as Production](poppedTokens, poppedWidth)
+				// 	:
+			{
 							token: production as Production,
 							start: poppedTokens[0].start,
 							width: poppedWidth,
@@ -157,6 +158,7 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 				return new Syntax.Type(Syntax.Kind.Float32Type, typeKW.start, typeKW.width)
 			case Lang.Token.Type.FLOAT64:
 				return new Syntax.Type(Syntax.Kind.Float64Type, typeKW.start, typeKW.width)
+			// TODO: Parse function types
 		}
 		throw Error(`Expected node in Type reducer to be a type token but got ${JSON.stringify(typeKW)}`)
 	},
