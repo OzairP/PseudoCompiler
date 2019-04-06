@@ -9,12 +9,8 @@ import * as Parser from './frontend/2-parser'
 
 // const tokens = Lexer.lex(file)
 const tokens = Lexer.lex(`
-if (1 === 1) {
-    0;
-} elif (1 === 1) {
-	0;
-} else {
-	0;
+func foo (): i32 {
+	return 0;
 }
 `)
 // console.log(Array.from(tokens).map(({ token }) => token).join(' '))

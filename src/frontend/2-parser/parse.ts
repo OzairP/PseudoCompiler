@@ -165,11 +165,11 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 	},
 
 	[Production.BIN_OP_EXPR]: function(nodes): Syntax.BinaryOperationExpression {
-		return (nodes[1] as Syntax.BinaryOperationExpressionTail).attach(nodes[0] as Syntax.Expression)
+		return (nodes[1] as Syntax.EphemeralBinaryOperationExpressionTail).attach(nodes[0] as Syntax.Expression)
 	},
 
-	[Production.BIN_OP_EXPR_TAIL]: function(nodes, width): Syntax.BinaryOperationExpressionTail {
-		return new Syntax.BinaryOperationExpressionTail(
+	[Production.BIN_OP_EXPR_TAIL]: function(nodes, width): Syntax.EphemeralBinaryOperationExpressionTail {
+		return new Syntax.EphemeralBinaryOperationExpressionTail(
 			nodes[0].start,
 			width,
 			nodes[0].token as Lang.Token.Operator,
@@ -236,5 +236,51 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 
 		nodes[0].token = Production.COND_STMT
 		return nodes[0] as Syntax.IfStatement
+	},
+
+	[Production.IMMUT_PARAM]: function(nodes, width): Syntax.Parameter {
+		return new Syntax.Parameter(nodes[0].start, width, true, nodes[0] as Syntax.Type, nodes[1] as Syntax.Identifier)
+	},
+
+	[Production.MUT_PARAM]: function(nodes, width): Syntax.Parameter {
+		;(nodes[1] as Syntax.Parameter).setMutable()
+		nodes[1].width = width
+		return nodes[1] as Syntax.Parameter
+	},
+
+	[Production.PARAM]: function(nodes): Syntax.Parameter {
+		nodes[0].token = Production.PARAM
+		return nodes[0] as Syntax.Parameter
+	},
+
+	[Production.PARAM_TAIL]: function(nodes): Syntax.Parameter {
+		nodes[1].token = Production.PARAM_TAIL
+		return nodes[1] as Syntax.Parameter
+	},
+
+	[Production.PARAMS]: function(nodes): Syntax.EphemeralParamsList {
+		if (nodes[1]) {
+			;(nodes[0] as Syntax.EphemeralParamsList).add(nodes[1] as Syntax.Parameter)
+			return nodes[0] as Syntax.EphemeralParamsList
+		}
+
+		return new Syntax.EphemeralParamsList(nodes[0] as Syntax.Parameter)
+	},
+
+	[Production.FUNC_DEC_STMT]: function(nodes, width): Syntax.FunctionDeclarationStatement {
+		let params: Array<Syntax.Parameter> = []
+
+		if (nodes[3].token !== Lang.Token.Punctuation.CLOSE_PAREN) {
+			params = (nodes.splice(3, 1)[0] as Syntax.EphemeralParamsList).parameters
+		}
+
+		return new Syntax.FunctionDeclarationStatement(
+			nodes[0].start,
+			width,
+			nodes[1] as Syntax.Identifier,
+			params,
+			nodes[5] as Syntax.Type,
+			nodes[7] as Syntax.Block
+		)
 	},
 }

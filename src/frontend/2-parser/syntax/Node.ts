@@ -6,6 +6,8 @@ export enum Kind {
 	Block,
 	Expression,
 	Identifier,
+	Parameter,
+
 	VariableDeclarationStatement,
 	IfStatement,
 	ElseStatement,
@@ -13,8 +15,8 @@ export enum Kind {
 	ConditionalStatement,
 	ReturnStatement,
 	FunctionDeclarationStatement,
+
 	FunctionExpression,
-	Paramater,
 	AssignmentExpression,
 	CallExpression,
 	BinaryOperationExpression,
@@ -39,6 +41,8 @@ export enum Kind {
 	UInt128Type,
 	Float32Type,
 	Float64Type,
+
+	ParameterListEphemeral
 }
 
 export class Node<K extends Kind = Kind> implements Token<Production> {

@@ -650,7 +650,7 @@ exports[`parser statement conditional statement if 1`] = `
   \\"width\\": 13,
   \\"statements\\": [
     {
-      \\"kind\\": 5,
+      \\"kind\\": 6,
       \\"token\\": \\"STMT\\",
       \\"start\\": 0,
       \\"width\\": 13,
@@ -690,7 +690,7 @@ exports[`parser statement conditional statement if elif 1`] = `
   \\"width\\": 28,
   \\"statements\\": [
     {
-      \\"kind\\": 5,
+      \\"kind\\": 6,
       \\"token\\": \\"STMT\\",
       \\"start\\": 6,
       \\"width\\": 28,
@@ -718,7 +718,7 @@ exports[`parser statement conditional statement if elif 1`] = `
       },
       \\"elseIfStatements\\": [
         {
-          \\"kind\\": 7,
+          \\"kind\\": 8,
           \\"token\\": \\"ELIF_STMT\\",
           \\"start\\": 26,
           \\"width\\": 15,
@@ -759,7 +759,7 @@ exports[`parser statement conditional statement if elif elif else 1`] = `
   \\"width\\": 54,
   \\"statements\\": [
     {
-      \\"kind\\": 5,
+      \\"kind\\": 6,
       \\"token\\": \\"STMT\\",
       \\"start\\": 6,
       \\"width\\": 54,
@@ -787,7 +787,7 @@ exports[`parser statement conditional statement if elif elif else 1`] = `
       },
       \\"elseIfStatements\\": [
         {
-          \\"kind\\": 7,
+          \\"kind\\": 8,
           \\"token\\": \\"ELIF_STMT\\",
           \\"start\\": 26,
           \\"width\\": 15,
@@ -815,7 +815,7 @@ exports[`parser statement conditional statement if elif elif else 1`] = `
           }
         },
         {
-          \\"kind\\": 7,
+          \\"kind\\": 8,
           \\"token\\": \\"ELIF_STMT\\",
           \\"start\\": 47,
           \\"width\\": 15,
@@ -844,7 +844,7 @@ exports[`parser statement conditional statement if elif elif else 1`] = `
         }
       ],
       \\"elseStatement\\": {
-        \\"kind\\": 6,
+        \\"kind\\": 7,
         \\"token\\": \\"ELSE_STMT\\",
         \\"start\\": 68,
         \\"width\\": 11,
@@ -877,7 +877,7 @@ exports[`parser statement conditional statement if elif else 1`] = `
   \\"width\\": 39,
   \\"statements\\": [
     {
-      \\"kind\\": 5,
+      \\"kind\\": 6,
       \\"token\\": \\"STMT\\",
       \\"start\\": 6,
       \\"width\\": 39,
@@ -905,7 +905,7 @@ exports[`parser statement conditional statement if elif else 1`] = `
       },
       \\"elseIfStatements\\": [
         {
-          \\"kind\\": 7,
+          \\"kind\\": 8,
           \\"token\\": \\"ELIF_STMT\\",
           \\"start\\": 26,
           \\"width\\": 15,
@@ -934,7 +934,7 @@ exports[`parser statement conditional statement if elif else 1`] = `
         }
       ],
       \\"elseStatement\\": {
-        \\"kind\\": 6,
+        \\"kind\\": 7,
         \\"token\\": \\"ELSE_STMT\\",
         \\"start\\": 47,
         \\"width\\": 11,
@@ -967,7 +967,7 @@ exports[`parser statement conditional statement if else 1`] = `
   \\"width\\": 24,
   \\"statements\\": [
     {
-      \\"kind\\": 5,
+      \\"kind\\": 6,
       \\"token\\": \\"STMT\\",
       \\"start\\": 6,
       \\"width\\": 24,
@@ -995,7 +995,7 @@ exports[`parser statement conditional statement if else 1`] = `
       },
       \\"elseIfStatements\\": [],
       \\"elseStatement\\": {
-        \\"kind\\": 6,
+        \\"kind\\": 7,
         \\"token\\": \\"ELSE_STMT\\",
         \\"start\\": 25,
         \\"width\\": 11,
@@ -1020,6 +1020,1390 @@ exports[`parser statement conditional statement if else 1`] = `
 }"
 `;
 
+exports[`parser statement function declaration statement dyadic 1 mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 50,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 50,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 19,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 19,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 23,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 26,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 26,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 30,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 34,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 47,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 47,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement dyadic 2 mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 50,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 50,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 15,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 15,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 19,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 26,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 26,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 30,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 34,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 47,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 47,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement dyadic immutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 46,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 46,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 15,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 15,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 19,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 22,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 22,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 26,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 30,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 43,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 43,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement dyadic mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 54,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 54,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 19,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 19,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 23,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 30,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 30,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 34,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 38,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 51,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 51,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement monadic monadic 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 39,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 39,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 15,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 15,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 19,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 23,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 36,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 36,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement monadic mutable monadic 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 43,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 43,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 19,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 19,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 23,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 27,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 40,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 40,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement niladic 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 6,
+  \\"width\\": 32,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 6,
+      \\"width\\": 32,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 11,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 17,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 29,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 29,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement triadic 1 mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 57,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 57,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 19,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 19,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 23,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 26,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 26,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 30,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 33,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 33,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 37,
+            \\"width\\": 1,
+            \\"name\\": \\"c\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 41,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 54,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 54,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement triadic 1-2 mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 61,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 61,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 19,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 19,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 23,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 30,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 30,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 34,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 37,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 37,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 41,
+            \\"width\\": 1,
+            \\"name\\": \\"c\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 45,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 58,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 58,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement triadic 1-3 mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 61,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 61,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 19,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 19,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 23,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 26,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 26,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 30,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 37,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 37,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 41,
+            \\"width\\": 1,
+            \\"name\\": \\"c\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 45,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 58,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 58,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement triadic 2 mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 57,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 57,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 15,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 15,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 19,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 26,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 26,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 30,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 33,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 33,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 37,
+            \\"width\\": 1,
+            \\"name\\": \\"c\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 41,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 54,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 54,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement triadic 2-3 mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 61,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 61,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 15,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 15,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 19,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 26,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 26,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 30,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 37,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 37,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 41,
+            \\"width\\": 1,
+            \\"name\\": \\"c\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 45,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 58,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 58,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement triadic 3 mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 57,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 57,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 15,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 15,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 19,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 22,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 22,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 26,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 33,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 33,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 37,
+            \\"width\\": 1,
+            \\"name\\": \\"c\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 41,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 54,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 54,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement triadic immutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 53,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 53,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 15,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 15,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 19,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 22,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 22,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 26,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 29,
+          \\"width\\": 5,
+          \\"immutable\\": true,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 29,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 33,
+            \\"width\\": 1,
+            \\"name\\": \\"c\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 37,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 50,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 50,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement function declaration statement triadic mutable 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 7,
+  \\"width\\": 65,
+  \\"statements\\": [
+    {
+      \\"kind\\": 11,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 7,
+      \\"width\\": 65,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 12,
+        \\"width\\": 1,
+        \\"name\\": \\"z\\"
+      },
+      \\"parameters\\": [
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM\\",
+          \\"start\\": 19,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 19,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 23,
+            \\"width\\": 1,
+            \\"name\\": \\"a\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 30,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 30,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 34,
+            \\"width\\": 1,
+            \\"name\\": \\"b\\"
+          }
+        },
+        {
+          \\"kind\\": 4,
+          \\"token\\": \\"PARAM_TAIL\\",
+          \\"start\\": 41,
+          \\"width\\": 9,
+          \\"immutable\\": false,
+          \\"type\\": {
+            \\"kind\\": 25,
+            \\"token\\": \\"TYPE\\",
+            \\"start\\": 41,
+            \\"width\\": 3
+          },
+          \\"identifier\\": {
+            \\"kind\\": 3,
+            \\"token\\": \\"IDEN\\",
+            \\"start\\": 45,
+            \\"width\\": 1,
+            \\"name\\": \\"c\\"
+          }
+        }
+      ],
+      \\"returnType\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 49,
+        \\"width\\": 3
+      },
+      \\"body\\": {
+        \\"kind\\": 1,
+        \\"token\\": \\"BLOCK\\",
+        \\"start\\": 62,
+        \\"width\\": 1,
+        \\"statements\\": [
+          {
+            \\"kind\\": 18,
+            \\"token\\": \\"STMT\\",
+            \\"start\\": 62,
+            \\"width\\": 1,
+            \\"value\\": 0
+          }
+        ]
+      }
+    }
+  ]
+}"
+`;
+
 exports[`parser statement return 1`] = `
 "{
   \\"kind\\": 0,
@@ -1028,7 +2412,7 @@ exports[`parser statement return 1`] = `
   \\"width\\": 9,
   \\"statements\\": [
     {
-      \\"kind\\": 9,
+      \\"kind\\": 10,
       \\"token\\": \\"STMT\\",
       \\"start\\": 0,
       \\"width\\": 9,
@@ -1052,7 +2436,7 @@ exports[`parser statement variable declaration immutable explicit 1`] = `
   \\"width\\": 17,
   \\"statements\\": [
     {
-      \\"kind\\": 4,
+      \\"kind\\": 5,
       \\"token\\": \\"STMT\\",
       \\"start\\": 0,
       \\"width\\": 17,
@@ -1090,7 +2474,7 @@ exports[`parser statement variable declaration immutable inferred 1`] = `
   \\"width\\": 12,
   \\"statements\\": [
     {
-      \\"kind\\": 4,
+      \\"kind\\": 5,
       \\"token\\": \\"STMT\\",
       \\"start\\": 0,
       \\"width\\": 12,
@@ -1122,7 +2506,7 @@ exports[`parser statement variable declaration mutable explicit 1`] = `
   \\"width\\": 21,
   \\"statements\\": [
     {
-      \\"kind\\": 4,
+      \\"kind\\": 5,
       \\"token\\": \\"STMT\\",
       \\"start\\": 0,
       \\"width\\": 21,
@@ -1160,7 +2544,7 @@ exports[`parser statement variable declaration mutable inferred 1`] = `
   \\"width\\": 16,
   \\"statements\\": [
     {
-      \\"kind\\": 4,
+      \\"kind\\": 5,
       \\"token\\": \\"STMT\\",
       \\"start\\": 0,
       \\"width\\": 16,
