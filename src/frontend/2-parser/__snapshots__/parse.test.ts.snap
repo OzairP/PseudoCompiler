@@ -1,5 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`parser expression assignment 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 9,
+  \\"statements\\": [
+    {
+      \\"kind\\": 13,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 9,
+      \\"identifier\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"name\\": \\"a\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 17,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 4,
+        \\"width\\": 5,
+        \\"value\\": \\"foo\\"
+      }
+    }
+  ]
+}"
+`;
+
 exports[`parser expression binary operation binary AND 1`] = `
 "{
   \\"kind\\": 0,
@@ -618,6 +649,25 @@ exports[`parser expression literals string literal 1`] = `
       \\"start\\": 0,
       \\"width\\": 7,
       \\"value\\": \\"hello\\"
+    }
+  ]
+}"
+`;
+
+exports[`parser expression parenthesized 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 1,
+  \\"width\\": 1,
+  \\"statements\\": [
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 1,
+      \\"width\\": 1,
+      \\"parenthesized\\": true,
+      \\"value\\": 1
     }
   ]
 }"

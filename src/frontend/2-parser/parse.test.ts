@@ -25,7 +25,7 @@ describe('parser', () => {
 			})
 		})
 
-		test('parenthesized expression', () => {
+		test('parenthesized', () => {
 			expect(ast`(1);`).toMatchSnapshot()
 		})
 
@@ -89,6 +89,11 @@ describe('parser', () => {
 			test('complex binary expression', () => {
 				expect(ast`1 - 1 * 5 + 1 % 3 + (2 * 3);`).toMatchSnapshot()
 			})
+		})
+
+		test('assignment', () => {
+			expect(ast`a = "foo";`)
+				.toMatchSnapshot()
 		})
 	})
 

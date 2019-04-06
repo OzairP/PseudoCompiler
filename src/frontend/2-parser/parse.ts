@@ -283,4 +283,16 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 			nodes[7] as Syntax.Block
 		)
 	},
+
+	[Production.ASSIGN_EXPR]: function (nodes, width): Syntax.AssignmentExpression {
+		return new Syntax.AssignmentExpression(nodes[0].start, width, nodes[0] as Syntax.Identifier, nodes[2] as Syntax.Expression)
+	},
+
+	// [Production.CALL_EXPR]: function (nodes, width): Syntax.CallExpression {
+	//
+	// },
+	//
+	// [Production.FUNC_EXPR]: function (nodes, width): Syntax.FunctionExpression {
+	//
+	// },
 }
