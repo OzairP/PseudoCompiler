@@ -8,7 +8,7 @@ import * as Parser from './frontend/2-parser'
 // const file = readFileSync(path).toString()
 
 // const tokens = Lexer.lex(file)
-const tokens = Lexer.lex(`let foo = 1 + 1.0;`)
+const tokens = Lexer.lex(`1 - 1 * 5 + 1 % 3 + (2 * 3);`)
 // console.log(Array.from(tokens).map(({ token }) => token).join(' '))
 const ast = Parser.parse(tokens)
 

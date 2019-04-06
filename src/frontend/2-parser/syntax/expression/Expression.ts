@@ -21,7 +21,4 @@ export class Expression<K extends ExpressionKind = ExpressionKind> extends Node<
 		this.parenthesized = value
 	}
 
-	public setToken(value: Production) {
-		this.token = value
-	}
 }

@@ -45,6 +45,10 @@ export class Node<K extends Kind> implements Token<Production> {
 	public content?: string
 
 	constructor(public kind: K, public token: Production, public start: number, public width: number) {}
+
+	public setToken (value: Production) {
+		this.token = value
+	}
 }
 
 export interface Value<T = string> {

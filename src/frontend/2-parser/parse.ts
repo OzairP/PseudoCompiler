@@ -31,7 +31,7 @@ export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 		// Get the transition via the current state and input column
 		const transition = transitions[state][input]
 
-		console.log(JSON.stringify(stack.stack.filter<LRStackSymbol>(isSymbol).map(x => x.token)))
+		// console.log(JSON.stringify(stack.stack.filter<LRStackSymbol>(isSymbol).map(x => x.token)))
 
 		// No such transition
 		if (transition === null) {
@@ -67,10 +67,9 @@ export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 			const poppedWidth = lastPoppedToken.start + lastPoppedToken.width - poppedTokens[0].start
 
 			stack.push(
-				// production in reducer
-				// 	? reducer[production as Production](poppedTokens, poppedWidth)
-				// 	:
-			{
+				production in reducer
+					? reducer[production as Production](poppedTokens, poppedWidth)
+					: {
 							token: production as Production,
 							start: poppedTokens[0].start,
 							width: poppedWidth,
@@ -115,14 +114,16 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 				return new Syntax.NumericLiteral(node.start, node.width, Number.parseInt(node.content!))
 			case Lang.Token.Literal.FLOAT:
 				return new Syntax.FloatLiteral(node.start, node.width, Number.parseFloat(node.content!))
-			case Production.PAREND_EXPR:
-				;(node as Syntax.Expression).setParenthesized()
-				break
 			default:
 				;(node as Syntax.Expression).setToken(Production.EXPR)
 				break
 		}
 
+		return node as Syntax.Expression
+	},
+
+	[Production.PAREND_EXPR]: function ([, node]): Syntax.Expression {
+		(node as Syntax.Expression).setParenthesized()
 		return node as Syntax.Expression
 	},
 
@@ -195,5 +196,9 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 		const expression: Syntax.Expression = nodes.shift()!
 
 		return new Syntax.VariableDeclarationStatement(start, width, isMutable, type, identifier, expression)
+	},
+
+	[Production.RETURN_STMT]: function(nodes, width): Syntax.ReturnStatement {
+		return new Syntax.ReturnStatement(nodes[0].start, width, nodes[1] as Syntax.Expression)
 	},
 }

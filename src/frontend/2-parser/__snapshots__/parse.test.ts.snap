@@ -1,0 +1,807 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parser expression binary operation binary AND 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 5,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 5,
+      \\"operator\\": \\"and_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 5,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary OR 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 5,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 5,
+      \\"operator\\": \\"or_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 5,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary add 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 4,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 4,
+      \\"operator\\": \\"plus_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 4,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary divide 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 4,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 4,
+      \\"operator\\": \\"divide_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 4,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary equality compare 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 5,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 5,
+      \\"operator\\": \\"equality_cmp_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 5,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary exponentiation 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 5,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 5,
+      \\"operator\\": \\"exponentiation_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 5,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary greater than 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 4,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 4,
+      \\"operator\\": \\"greater_than_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 4,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary greater than equal 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 5,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 5,
+      \\"operator\\": \\"greater_than_eql_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 5,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary less than 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 4,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 4,
+      \\"operator\\": \\"less_than_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 4,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary less than equal 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 5,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 5,
+      \\"operator\\": \\"less_than_eql_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 5,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary modulo 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 4,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 4,
+      \\"operator\\": \\"modulo_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 4,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary multiply 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 4,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 4,
+      \\"operator\\": \\"multiply_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 4,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary strict compare 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 6,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 6,
+      \\"operator\\": \\"strict_cmp_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 6,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation binary subtract 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 4,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 4,
+      \\"operator\\": \\"minus_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 1,
+        \\"value\\": 1
+      },
+      \\"rhs\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 4,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression binary operation complex binary expression 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 20,
+  \\"statements\\": [
+    {
+      \\"kind\\": 15,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 20,
+      \\"operator\\": \\"plus_op\\",
+      \\"lhs\\": {
+        \\"kind\\": 15,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 0,
+        \\"width\\": 13,
+        \\"operator\\": \\"modulo_op\\",
+        \\"lhs\\": {
+          \\"kind\\": 15,
+          \\"token\\": \\"EXPR\\",
+          \\"start\\": 0,
+          \\"width\\": 10,
+          \\"operator\\": \\"plus_op\\",
+          \\"lhs\\": {
+            \\"kind\\": 15,
+            \\"token\\": \\"EXPR\\",
+            \\"start\\": 0,
+            \\"width\\": 7,
+            \\"operator\\": \\"multiply_op\\",
+            \\"lhs\\": {
+              \\"kind\\": 15,
+              \\"token\\": \\"EXPR\\",
+              \\"start\\": 0,
+              \\"width\\": 4,
+              \\"operator\\": \\"minus_op\\",
+              \\"lhs\\": {
+                \\"kind\\": 18,
+                \\"token\\": \\"EXPR\\",
+                \\"start\\": 0,
+                \\"width\\": 1,
+                \\"value\\": 1
+              },
+              \\"rhs\\": {
+                \\"kind\\": 18,
+                \\"token\\": \\"EXPR\\",
+                \\"start\\": 4,
+                \\"width\\": 1,
+                \\"value\\": 1
+              }
+            },
+            \\"rhs\\": {
+              \\"kind\\": 18,
+              \\"token\\": \\"EXPR\\",
+              \\"start\\": 8,
+              \\"width\\": 1,
+              \\"value\\": 5
+            }
+          },
+          \\"rhs\\": {
+            \\"kind\\": 18,
+            \\"token\\": \\"EXPR\\",
+            \\"start\\": 12,
+            \\"width\\": 1,
+            \\"value\\": 1
+          }
+        },
+        \\"rhs\\": {
+          \\"kind\\": 18,
+          \\"token\\": \\"EXPR\\",
+          \\"start\\": 16,
+          \\"width\\": 1,
+          \\"value\\": 3
+        }
+      },
+      \\"rhs\\": {
+        \\"kind\\": 15,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 21,
+        \\"width\\": 4,
+        \\"parenthesized\\": true,
+        \\"operator\\": \\"multiply_op\\",
+        \\"lhs\\": {
+          \\"kind\\": 18,
+          \\"token\\": \\"EXPR\\",
+          \\"start\\": 21,
+          \\"width\\": 1,
+          \\"value\\": 2
+        },
+        \\"rhs\\": {
+          \\"kind\\": 18,
+          \\"token\\": \\"EXPR\\",
+          \\"start\\": 25,
+          \\"width\\": 1,
+          \\"value\\": 3
+        }
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser expression identifier 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 1,
+  \\"statements\\": [
+    {
+      \\"kind\\": 3,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 1,
+      \\"name\\": \\"a\\"
+    }
+  ]
+}"
+`;
+
+exports[`parser expression literals float literal 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 3,
+  \\"statements\\": [
+    {
+      \\"kind\\": 19,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 3,
+      \\"value\\": 1
+    }
+  ]
+}"
+`;
+
+exports[`parser expression literals numeric literal 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 1,
+  \\"statements\\": [
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 1,
+      \\"value\\": 1
+    }
+  ]
+}"
+`;
+
+exports[`parser expression literals string literal 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 7,
+  \\"statements\\": [
+    {
+      \\"kind\\": 17,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 7,
+      \\"value\\": \\"hello\\"
+    }
+  ]
+}"
+`;
+
+exports[`parser expression parenthesized expression 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 1,
+  \\"width\\": 1,
+  \\"statements\\": [
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 1,
+      \\"width\\": 1,
+      \\"parenthesized\\": true,
+      \\"value\\": 1
+    }
+  ]
+}"
+`;
+
+exports[`parser statement return 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 9,
+  \\"statements\\": [
+    {
+      \\"kind\\": 9,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 9,
+      \\"expression\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 7,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration immutable explicit 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 17,
+  \\"statements\\": [
+    {
+      \\"kind\\": 4,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 17,
+      \\"mutable\\": false,
+      \\"type\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 9,
+        \\"width\\": 3
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 4,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 15,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration immutable inferred 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 12,
+  \\"statements\\": [
+    {
+      \\"kind\\": 4,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 12,
+      \\"mutable\\": false,
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 4,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 10,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration mutable explicit 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 21,
+  \\"statements\\": [
+    {
+      \\"kind\\": 4,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 21,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 3
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 19,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration mutable inferred 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 16,
+  \\"statements\\": [
+    {
+      \\"kind\\": 4,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 16,
+      \\"mutable\\": true,
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 14,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
