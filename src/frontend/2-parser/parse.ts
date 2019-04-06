@@ -83,19 +83,22 @@ export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 	return JSON.stringify(stack.stack[1], null, 2)
 }
 
-// @ts-ignore
 const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: number) => Syntax.Node> = {
 	[Production.PROGRAM]: function([node]): Syntax.Program {
 		return new Syntax.Program(node as Syntax.Block)
 	},
 
-	[Production.BLOCK]: function([node0, node1], width): Syntax.Block {
-		return new Syntax.Block(
-			node0.start,
-			width,
-			// @ts-ignore
-			node1 && node1 instanceof Syntax.Block ? [node0, ...node1.statements] : [node0]
-		)
+	[Production.BLOCK]: function(nodes): Syntax.Block {
+		let block: Syntax.Block
+
+		if (nodes[1]) {
+			block = nodes[0] as Syntax.Block
+			block.add(nodes[1] as Syntax.Statement)
+		} else {
+			block = new Syntax.Block(nodes[0].start, nodes[0].width, [nodes[0] as Syntax.Statement])
+		}
+
+		return block
 	},
 
 	[Production.STMT]: function([node]): Syntax.Statement {
@@ -136,15 +139,10 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 				params = (nodes.splice(1, 1)[0] as Syntax.EphemeralParameterList).parameters
 			}
 
-			return new Syntax.FunctionType(
-				nodes[0].start,
-				width,
-				params,
-				nodes[3] as Syntax.Type,
-			)
+			return new Syntax.FunctionType(nodes[0].start, width, params, nodes[3] as Syntax.Type)
 		}
 
-		const [ typeKW ] = nodes
+		const [typeKW] = nodes
 		switch (typeKW.token) {
 			case Lang.Token.Type.VOID:
 				return new Syntax.Type(Syntax.Kind.VoidType, typeKW.start, typeKW.width)
@@ -340,7 +338,7 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 		return new Syntax.CallExpression(nodes[0].start, width, nodes[0] as Syntax.Identifier, args)
 	},
 
-	[Production.FUNC_EXPR]: function (nodes, width): Syntax.FunctionExpression {
+	[Production.FUNC_EXPR]: function(nodes, width): Syntax.FunctionExpression {
 		let params: Array<Syntax.Parameter> = []
 
 		if (nodes[2].token !== Lang.Token.Punctuation.CLOSE_PAREN) {

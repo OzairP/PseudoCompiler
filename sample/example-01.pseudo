@@ -26,7 +26,7 @@ let add = func (i32 a, i32 b): i32 {
 
 print(add(num, 5));
 
-func with1and2 ((i32, i32): i32 higherOrder): i32 {
+func with1and2 ((i32 a, i32 a): i32 higherOrder): i32 {
 	return higherOrder(1, 2);
 }
 

@@ -6,4 +6,9 @@ export class Block extends Node<Kind.Block> {
 	constructor(public start: number, public width: number, public statements: Array<Statement>) {
 		super(Kind.Block, Production.BLOCK, start, width)
 	}
+
+	public add(statement: Statement) {
+		this.statements.push(statement)
+		this.width += statement.width
+	}
 }
