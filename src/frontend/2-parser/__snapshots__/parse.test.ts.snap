@@ -12,7 +12,7 @@ exports[`parser expression assignment 1`] = `
       \\"token\\": \\"STMT\\",
       \\"start\\": 0,
       \\"width\\": 9,
-      \\"identifier\\": {
+      \\"name\\": {
         \\"kind\\": 3,
         \\"token\\": \\"IDEN\\",
         \\"start\\": 0,
@@ -655,25 +655,6 @@ exports[`parser expression literals string literal 1`] = `
 `;
 
 exports[`parser expression parenthesized 1`] = `
-"{
-  \\"kind\\": 0,
-  \\"token\\": \\"PROGRAM\\",
-  \\"start\\": 1,
-  \\"width\\": 1,
-  \\"statements\\": [
-    {
-      \\"kind\\": 18,
-      \\"token\\": \\"STMT\\",
-      \\"start\\": 1,
-      \\"width\\": 1,
-      \\"parenthesized\\": true,
-      \\"value\\": 1
-    }
-  ]
-}"
-`;
-
-exports[`parser expression parenthesized expression 1`] = `
 "{
   \\"kind\\": 0,
   \\"token\\": \\"PROGRAM\\",

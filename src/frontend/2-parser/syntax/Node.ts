@@ -1,5 +1,6 @@
 import { Token } from '../../1-lexer'
 import { Production } from '../transitions'
+import { ExpressionKind } from './expression'
 
 export enum Kind {
 	Program,
@@ -53,4 +54,9 @@ export class Node<K extends Kind = Kind> implements Token<Production> {
 
 export interface Value<T = string> {
 	value: T
+}
+
+export interface Assignment {
+	name: Node<Kind.Identifier>
+	assignment: Node<ExpressionKind>
 }
