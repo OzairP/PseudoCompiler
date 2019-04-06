@@ -2,7 +2,7 @@ import { Production } from '../../transitions'
 import { Kind, Node } from '../Node'
 import { Parameter } from '../Parameter'
 
-export class EphemeralParamsList extends Node<Kind.ParameterListEphemeral> {
+export class EphemeralParameterList extends Node<Kind.ParameterListEphemeral> {
 	public parameters: Array<Parameter> = []
 
 	constructor (parameter: Parameter) {

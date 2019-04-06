@@ -9,9 +9,7 @@ import * as Parser from './frontend/2-parser'
 
 // const tokens = Lexer.lex(file)
 const tokens = Lexer.lex(`
-func foo (): i32 {
-	return 0;
-}
+print();
 `)
 // console.log(Array.from(tokens).map(({ token }) => token).join(' '))
 const ast = Parser.parse(tokens)

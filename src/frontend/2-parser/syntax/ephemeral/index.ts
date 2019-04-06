@@ -1,2 +1,3 @@
 export * from './EphemeralBinaryOperationExpressionTail'
-export * from './EphemeralParamsList'
+export * from './EphemeralParameterList'
+export * from './EphemeralArgumentList'

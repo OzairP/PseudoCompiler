@@ -43,7 +43,8 @@ export enum Kind {
 	Float32Type,
 	Float64Type,
 
-	ParameterListEphemeral
+	ParameterListEphemeral,
+	ArgumentListEphemeral
 }
 
 export class Node<K extends Kind = Kind> implements Token<Production> {

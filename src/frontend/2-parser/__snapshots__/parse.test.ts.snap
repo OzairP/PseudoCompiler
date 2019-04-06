@@ -582,6 +582,205 @@ exports[`parser expression binary operation complex binary expression 1`] = `
 }"
 `;
 
+exports[`parser expression call dyadic 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 11,
+  \\"statements\\": [
+    {
+      \\"kind\\": 14,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 11,
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 0,
+        \\"width\\": 5,
+        \\"name\\": \\"print\\"
+      },
+      \\"args\\": [
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"EXPR\\",
+          \\"start\\": 6,
+          \\"width\\": 1,
+          \\"value\\": 0
+        },
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"ARG_TAIL\\",
+          \\"start\\": 9,
+          \\"width\\": 1,
+          \\"value\\": 0
+        }
+      ]
+    }
+  ]
+}"
+`;
+
+exports[`parser expression call monadic 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 8,
+  \\"statements\\": [
+    {
+      \\"kind\\": 14,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 8,
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 0,
+        \\"width\\": 5,
+        \\"name\\": \\"print\\"
+      },
+      \\"args\\": [
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"EXPR\\",
+          \\"start\\": 6,
+          \\"width\\": 1,
+          \\"value\\": 0
+        }
+      ]
+    }
+  ]
+}"
+`;
+
+exports[`parser expression call niladic 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 7,
+  \\"statements\\": [
+    {
+      \\"kind\\": 14,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 7,
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 0,
+        \\"width\\": 5,
+        \\"name\\": \\"print\\"
+      },
+      \\"args\\": []
+    }
+  ]
+}"
+`;
+
+exports[`parser expression call polyadic 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 17,
+  \\"statements\\": [
+    {
+      \\"kind\\": 14,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 17,
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 0,
+        \\"width\\": 5,
+        \\"name\\": \\"print\\"
+      },
+      \\"args\\": [
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"EXPR\\",
+          \\"start\\": 6,
+          \\"width\\": 1,
+          \\"value\\": 0
+        },
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"ARG_TAIL\\",
+          \\"start\\": 9,
+          \\"width\\": 1,
+          \\"value\\": 0
+        },
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"ARG_TAIL\\",
+          \\"start\\": 12,
+          \\"width\\": 1,
+          \\"value\\": 0
+        },
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"ARG_TAIL\\",
+          \\"start\\": 15,
+          \\"width\\": 1,
+          \\"value\\": 0
+        }
+      ]
+    }
+  ]
+}"
+`;
+
+exports[`parser expression call triadic 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 14,
+  \\"statements\\": [
+    {
+      \\"kind\\": 14,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 14,
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 0,
+        \\"width\\": 5,
+        \\"name\\": \\"print\\"
+      },
+      \\"args\\": [
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"EXPR\\",
+          \\"start\\": 6,
+          \\"width\\": 1,
+          \\"value\\": 0
+        },
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"ARG_TAIL\\",
+          \\"start\\": 9,
+          \\"width\\": 1,
+          \\"value\\": 0
+        },
+        {
+          \\"kind\\": 18,
+          \\"token\\": \\"ARG_TAIL\\",
+          \\"start\\": 12,
+          \\"width\\": 1,
+          \\"value\\": 0
+        }
+      ]
+    }
+  ]
+}"
+`;
+
 exports[`parser expression identifier 1`] = `
 "{
   \\"kind\\": 0,
@@ -595,6 +794,60 @@ exports[`parser expression identifier 1`] = `
       \\"start\\": 0,
       \\"width\\": 1,
       \\"name\\": \\"a\\"
+    }
+  ]
+}"
+`;
+
+exports[`parser expression literal float literal 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 3,
+  \\"statements\\": [
+    {
+      \\"kind\\": 19,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 3,
+      \\"value\\": 1
+    }
+  ]
+}"
+`;
+
+exports[`parser expression literal numeric literal 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 1,
+  \\"statements\\": [
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 1,
+      \\"value\\": 1
+    }
+  ]
+}"
+`;
+
+exports[`parser expression literal string literal 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 7,
+  \\"statements\\": [
+    {
+      \\"kind\\": 17,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 7,
+      \\"value\\": \\"hello\\"
     }
   ]
 }"

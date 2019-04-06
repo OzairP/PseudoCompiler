@@ -4,6 +4,7 @@ import * as Lang from '../../language'
 import { Token } from '../1-lexer'
 import { SyntaxError } from '../SyntaxError'
 import * as Syntax from './syntax'
+import { EphemeralArgumentList } from './syntax'
 import { Action, LR_TOKEN, Production, reduction, transitions } from './transitions'
 
 type LRStackSymbol = Syntax.Node | Token<Production> | Token
@@ -258,20 +259,20 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 		return nodes[1] as Syntax.Parameter
 	},
 
-	[Production.PARAMS]: function(nodes): Syntax.EphemeralParamsList {
+	[Production.PARAMS]: function(nodes): Syntax.EphemeralParameterList {
 		if (nodes[1]) {
-			;(nodes[0] as Syntax.EphemeralParamsList).add(nodes[1] as Syntax.Parameter)
-			return nodes[0] as Syntax.EphemeralParamsList
+			;(nodes[0] as Syntax.EphemeralParameterList).add(nodes[1] as Syntax.Parameter)
+			return nodes[0] as Syntax.EphemeralParameterList
 		}
 
-		return new Syntax.EphemeralParamsList(nodes[0] as Syntax.Parameter)
+		return new Syntax.EphemeralParameterList(nodes[0] as Syntax.Parameter)
 	},
 
 	[Production.FUNC_DEC_STMT]: function(nodes, width): Syntax.FunctionDeclarationStatement {
 		let params: Array<Syntax.Parameter> = []
 
 		if (nodes[3].token !== Lang.Token.Punctuation.CLOSE_PAREN) {
-			params = (nodes.splice(3, 1)[0] as Syntax.EphemeralParamsList).parameters
+			params = (nodes.splice(3, 1)[0] as Syntax.EphemeralParameterList).parameters
 		}
 
 		return new Syntax.FunctionDeclarationStatement(
@@ -284,14 +285,45 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 		)
 	},
 
-	[Production.ASSIGN_EXPR]: function (nodes, width): Syntax.AssignmentExpression {
-		return new Syntax.AssignmentExpression(nodes[0].start, width, nodes[0] as Syntax.Identifier, nodes[2] as Syntax.Expression)
+	[Production.ASSIGN_EXPR]: function(nodes, width): Syntax.AssignmentExpression {
+		return new Syntax.AssignmentExpression(
+			nodes[0].start,
+			width,
+			nodes[0] as Syntax.Identifier,
+			nodes[2] as Syntax.Expression
+		)
 	},
 
-	// [Production.CALL_EXPR]: function (nodes, width): Syntax.CallExpression {
-	//
-	// },
-	//
+	[Production.ARGS]: function(nodes): Syntax.EphemeralArgumentList {
+		// If we are adding an expression to a tail (dyad's), create a new list
+		// if not we are adding a tail onto a list
+		const args =
+			nodes[0].token === Production.EXPR
+				? new EphemeralArgumentList(nodes[0] as Syntax.Expression)
+				: (nodes[0] as Syntax.EphemeralArgumentList)
+
+		args.add(nodes[1] as Syntax.Expression)
+
+		return args
+	},
+
+	[Production.ARG_TAIL]: function(nodes): Syntax.Expression {
+		nodes[1].token = Production.ARG_TAIL
+		return nodes[1] as Syntax.Expression
+	},
+
+	[Production.CALL_EXPR]: function(nodes, width): Syntax.CallExpression {
+		let args: Array<Syntax.Expression> = []
+
+		if (nodes[2].token === Production.EXPR) {
+			args = [nodes[2] as Syntax.Expression]
+		} else if (nodes[2].token === Production.ARGS) {
+			args = (nodes[2] as Syntax.EphemeralArgumentList).args
+		}
+
+		return new Syntax.CallExpression(nodes[0].start, width, nodes[0] as Syntax.Identifier, args)
+	},
+
 	// [Production.FUNC_EXPR]: function (nodes, width): Syntax.FunctionExpression {
 	//
 	// },

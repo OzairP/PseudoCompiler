@@ -11,7 +11,7 @@ describe('parser', () => {
 			expect(ast`a;`).toMatchSnapshot()
 		})
 
-		describe('literals', () => {
+		describe('literal', () => {
 			test('string literal', () => {
 				expect(ast`"hello";`).toMatchSnapshot()
 			})
@@ -94,6 +94,28 @@ describe('parser', () => {
 		test('assignment', () => {
 			expect(ast`a = "foo";`)
 				.toMatchSnapshot()
+		})
+
+		describe('call', () => {
+			test('niladic', () => {
+				expect(ast`print();`).toMatchSnapshot()
+			})
+
+			test('monadic', () => {
+				expect(ast`print(0);`).toMatchSnapshot()
+			})
+
+			test('dyadic', () => {
+				expect(ast`print(0, 0);`).toMatchSnapshot()
+			})
+
+			test('triadic', () => {
+				expect(ast`print(0, 0, 0);`).toMatchSnapshot()
+			})
+
+			test('polyadic', () => {
+				expect(ast`print(0, 0, 0, 0);`).toMatchSnapshot()
+			})
 		})
 	})
 
