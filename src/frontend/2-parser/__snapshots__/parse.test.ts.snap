@@ -4287,6 +4287,576 @@ exports[`parser statement variable declaration immutable inferred 1`] = `
 }"
 `;
 
+exports[`parser statement variable declaration multiple types 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 22,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 22,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 20,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 4
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 20,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 2`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 22,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 22,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 21,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 4
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 20,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 3`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 24,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 24,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 22,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 6
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 22,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 4`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 20,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 20,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 23,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 2
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 18,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 5`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 21,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 21,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 24,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 3
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 19,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 6`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 21,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 21,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 25,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 3
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 19,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 7`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 21,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 21,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 26,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 3
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 19,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 8`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 22,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 22,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 27,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 4
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 20,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 9`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 21,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 21,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 28,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 3
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 19,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 10`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 22,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 22,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 29,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 4
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 20,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 11`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 22,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 22,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 30,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 4
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 20,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 12`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 22,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 22,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 31,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 4
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 20,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 13`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 23,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 23,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 32,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 5
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 21,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 14`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 21,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 21,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 33,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 3
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 19,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
+exports[`parser statement variable declaration multiple types 15`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 21,
+  \\"statements\\": [
+    {
+      \\"kind\\": 5,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 21,
+      \\"mutable\\": true,
+      \\"type\\": {
+        \\"kind\\": 34,
+        \\"token\\": \\"TYPE\\",
+        \\"start\\": 13,
+        \\"width\\": 3
+      },
+      \\"name\\": {
+        \\"kind\\": 3,
+        \\"token\\": \\"IDEN\\",
+        \\"start\\": 8,
+        \\"width\\": 3,
+        \\"name\\": \\"foo\\"
+      },
+      \\"assignment\\": {
+        \\"kind\\": 18,
+        \\"token\\": \\"EXPR\\",
+        \\"start\\": 19,
+        \\"width\\": 1,
+        \\"value\\": 1
+      }
+    }
+  ]
+}"
+`;
+
 exports[`parser statement variable declaration mutable explicit 1`] = `
 "{
   \\"kind\\": 0,
@@ -4356,3 +4926,5 @@ exports[`parser statement variable declaration mutable inferred 1`] = `
   ]
 }"
 `;
+
+exports[`parser throws for unexpected token 1`] = `"Unexpected token identifier_sym"`;

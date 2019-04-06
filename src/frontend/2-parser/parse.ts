@@ -67,15 +67,7 @@ export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 			const lastPoppedToken = poppedTokens[poppedTokens.length - 1]
 			const poppedWidth = lastPoppedToken.start + lastPoppedToken.width - poppedTokens[0].start
 
-			stack.push(
-				production in reducer
-					? reducer[production as Production](poppedTokens, poppedWidth)
-					: ({
-							token: production as Production,
-							start: poppedTokens[0].start,
-							width: poppedWidth,
-					  } as Token<Production>)
-			)
+			stack.push(reducer[production as Production](poppedTokens, poppedWidth))
 		}
 	} while (true)
 
@@ -142,7 +134,7 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 			return new Syntax.FunctionType(nodes[0].start, width, params, nodes[3] as Syntax.Type)
 		}
 
-		const [typeKW] = nodes
+		const typeKW = nodes[0] as Token<Lang.Token.Type>
 		switch (typeKW.token) {
 			case Lang.Token.Type.VOID:
 				return new Syntax.Type(Syntax.Kind.VoidType, typeKW.start, typeKW.width)
@@ -174,9 +166,7 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 				return new Syntax.Type(Syntax.Kind.Float32Type, typeKW.start, typeKW.width)
 			case Lang.Token.Type.FLOAT64:
 				return new Syntax.Type(Syntax.Kind.Float64Type, typeKW.start, typeKW.width)
-			// TODO: Parse function types
 		}
-		throw Error(`Expected node in Type reducer to be a type token but got ${JSON.stringify(typeKW)}`)
 	},
 
 	[Production.BIN_OP_EXPR]: function(nodes): Syntax.BinaryOperationExpression {

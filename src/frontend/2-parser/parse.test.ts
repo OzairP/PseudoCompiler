@@ -6,6 +6,10 @@ const ast = (literals: TemplateStringsArray, ...placeholders: Array<string>): Pr
 	Parser.parse(Lexer.lex(String.raw(literals, ...placeholders)))
 
 describe('parser', () => {
+	test('throws for unexpected token', () => {
+		expect(() => ast`foo bar = i32`).toThrowErrorMatchingSnapshot()
+	})
+
 	describe('expression', () => {
 		test('identifier', () => {
 			expect(ast`a;`).toMatchSnapshot()
@@ -272,6 +276,28 @@ describe('parser', () => {
 
 			test('mutable explicit', () => {
 				expect(ast`let mut foo: i32 = 1;`).toMatchSnapshot()
+			})
+
+			test('multiple types', () => {
+				const staticTypes = [
+					'void',
+					'bool',
+					'string',
+					'i8',
+					'i16',
+					'i32',
+					'i64',
+					'i128',
+					'ui8',
+					'ui16',
+					'ui32',
+					'ui64',
+					'ui128',
+					'f32',
+					'f64',
+				]
+
+				staticTypes.forEach(type => expect(ast`let mut foo: ${type} = 1;`).toMatchSnapshot())
 			})
 		})
 
