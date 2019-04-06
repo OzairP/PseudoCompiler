@@ -41,7 +41,7 @@ export enum Kind {
 	Float64Type,
 }
 
-export class Node<K extends Kind> implements Token<Production> {
+export class Node<K extends Kind = Kind> implements Token<Production> {
 	public content?: string
 
 	constructor(public kind: K, public token: Production, public start: number, public width: number) {}

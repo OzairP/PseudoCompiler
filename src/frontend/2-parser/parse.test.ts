@@ -114,5 +114,44 @@ describe('parser', () => {
 		test('return', () => {
 			expect(ast`return 1;`).toMatchSnapshot()
 		})
+
+		describe('conditional statement', () => {
+
+			test('if', () => {
+				expect(ast`if (0) { 0; }`).toMatchSnapshot()
+			})
+
+			test('if else', () => {
+				expect(ast`
+					if (0) { 0; }
+					else { 0; }
+				`).toMatchSnapshot()
+			})
+
+			test('if elif', () => {
+				expect(ast`
+					if (0) { 0; } 
+					elif (0) { 0; }
+				`).toMatchSnapshot()
+			})
+
+			test('if elif else', () => {
+				expect(ast`
+					if (0) { 0; } 
+					elif (0) { 0; }
+					else { 0; }
+				`).toMatchSnapshot()
+			})
+
+			test('if elif elif else', () => {
+				expect(ast`
+					if (0) { 0; } 
+					elif (0) { 0; }
+					elif (0) { 0; }
+					else { 0; }
+				`).toMatchSnapshot()
+			})
+
+		})
 	})
 })

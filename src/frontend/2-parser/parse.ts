@@ -6,7 +6,7 @@ import { SyntaxError } from '../SyntaxError'
 import * as Syntax from './syntax'
 import { Action, LR_TOKEN, Production, reduction, transitions } from './transitions'
 
-type LRStackSymbol = Token | Token<Production> | Syntax.Node<Syntax.Kind>
+type LRStackSymbol = Syntax.Node | Token<Production> | Token
 
 export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 	const tokens = makePeekingIterator<Token>(tokenIterator)
@@ -69,11 +69,11 @@ export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 			stack.push(
 				production in reducer
 					? reducer[production as Production](poppedTokens, poppedWidth)
-					: {
+					: ({
 							token: production as Production,
 							start: poppedTokens[0].start,
 							width: poppedWidth,
-					  }
+					  } as Token<Production>)
 			)
 		}
 	} while (true)
@@ -83,7 +83,7 @@ export function parse(tokenIterator: Iterator<Token>): Syntax.Program {
 }
 
 // @ts-ignore
-const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: number) => Token<Production>> = {
+const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: number) => Syntax.Node> = {
 	[Production.PROGRAM]: function([node]): Syntax.Program {
 		return new Syntax.Program(node as Syntax.Block)
 	},
@@ -122,8 +122,8 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 		return node as Syntax.Expression
 	},
 
-	[Production.PAREND_EXPR]: function ([, node]): Syntax.Expression {
-		(node as Syntax.Expression).setParenthesized()
+	[Production.PAREND_EXPR]: function([, node]): Syntax.Expression {
+		;(node as Syntax.Expression).setParenthesized()
 		return node as Syntax.Expression
 	},
 
@@ -200,5 +200,41 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 
 	[Production.RETURN_STMT]: function(nodes, width): Syntax.ReturnStatement {
 		return new Syntax.ReturnStatement(nodes[0].start, width, nodes[1] as Syntax.Expression)
+	},
+
+	[Production.IF_STMT]: function(nodes, width): Syntax.IfStatement {
+		if (nodes[0].token === Lang.Token.Keyword.IF) {
+			return new Syntax.IfStatement(
+				nodes[0].start,
+				width,
+				nodes[2] as Syntax.Expression,
+				nodes[5] as Syntax.Block
+			)
+		}
+
+		;(nodes[0] as Syntax.IfStatement).addElseIfStatement(nodes[1] as Syntax.ElseIfStatement)
+		return nodes[0] as Syntax.IfStatement
+	},
+
+	[Production.ELSE_STMT]: function(nodes, width): Syntax.ElseStatement {
+		return new Syntax.ElseStatement(nodes[0].start, width, nodes[2] as Syntax.Block)
+	},
+
+	[Production.ELIF_STMT]: function(nodes, width): Syntax.ElseIfStatement {
+		return new Syntax.ElseIfStatement(
+			nodes[0].start,
+			width,
+			nodes[2] as Syntax.Expression,
+			nodes[5] as Syntax.Block
+		)
+	},
+
+	[Production.COND_STMT]: function(nodes): Syntax.IfStatement {
+		if (nodes[1] && (nodes[1] as Syntax.Node).kind === Syntax.Kind.ElseStatement) {
+			;(nodes[0] as Syntax.IfStatement).setElseStatement(nodes[1] as Syntax.ElseStatement)
+		}
+
+		;(nodes[0] as Syntax.IfStatement).setToken(Production.COND_STMT)
+		return nodes[0] as Syntax.IfStatement
 	},
 }
