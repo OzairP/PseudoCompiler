@@ -5,6 +5,7 @@
 		"moduleResolution": "node",
 		"lib": ["esnext"],
 		"outDir": "./build",
+		"incremental": true,
 		"declaration": true,
 		"sourceMap": true,
 		"allowJs": false,

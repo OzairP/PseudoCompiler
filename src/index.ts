@@ -9,7 +9,9 @@ import * as Parser from './frontend/2-parser'
 
 // const tokens = Lexer.lex(file)
 const tokens = Lexer.lex(`
-print();
+let a = func ((i32 a, i32 b): i32 a): i32 {
+	0;
+};
 `)
 // console.log(Array.from(tokens).map(({ token }) => token).join(' '))
 const ast = Parser.parse(tokens)

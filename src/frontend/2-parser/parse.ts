@@ -124,11 +124,27 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 	},
 
 	[Production.PAREND_EXPR]: function([, node]): Syntax.Expression {
-		;(node as Syntax.Expression).setParenthesized()
+		;(node as Syntax.Expression).parenthesized = true
 		return node as Syntax.Expression
 	},
 
-	[Production.TYPE]: function([typeKW]): Syntax.Type {
+	[Production.TYPE]: function(nodes, width): Syntax.Type {
+		if (nodes[0].token === Lang.Token.Punctuation.OPEN_PAREN) {
+			let params: Array<Syntax.Parameter> = []
+
+			if (nodes[1].token !== Lang.Token.Punctuation.CLOSE_PAREN) {
+				params = (nodes.splice(1, 1)[0] as Syntax.EphemeralParameterList).parameters
+			}
+
+			return new Syntax.FunctionType(
+				nodes[0].start,
+				width,
+				params,
+				nodes[3] as Syntax.Type,
+			)
+		}
+
+		const [ typeKW ] = nodes
 		switch (typeKW.token) {
 			case Lang.Token.Type.VOID:
 				return new Syntax.Type(Syntax.Kind.VoidType, typeKW.start, typeKW.width)
@@ -324,7 +340,19 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 		return new Syntax.CallExpression(nodes[0].start, width, nodes[0] as Syntax.Identifier, args)
 	},
 
-	// [Production.FUNC_EXPR]: function (nodes, width): Syntax.FunctionExpression {
-	//
-	// },
+	[Production.FUNC_EXPR]: function (nodes, width): Syntax.FunctionExpression {
+		let params: Array<Syntax.Parameter> = []
+
+		if (nodes[2].token !== Lang.Token.Punctuation.CLOSE_PAREN) {
+			params = (nodes.splice(2, 1)[0] as Syntax.EphemeralParameterList).parameters
+		}
+
+		return new Syntax.FunctionExpression(
+			nodes[0].start,
+			width,
+			params,
+			nodes[4] as Syntax.Type,
+			nodes[6] as Syntax.Block
+		)
+	},
 }

@@ -16,9 +16,4 @@ export class Expression<K extends ExpressionKind = ExpressionKind> extends Node<
 	constructor(kind: K, token: Production, start: number, width: number, public parenthesized?: boolean) {
 		super(kind, token, start, width)
 	}
-
-	public setParenthesized(value: boolean = true) {
-		this.parenthesized = value
-	}
-
 }

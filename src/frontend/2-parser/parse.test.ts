@@ -117,6 +117,144 @@ describe('parser', () => {
 				expect(ast`print(0, 0, 0, 0);`).toMatchSnapshot()
 			})
 		})
+
+		describe('function', () => {
+			test('niladic', () => {
+				expect(ast`
+					func (): i32 {
+						0;
+					};
+				`).toMatchSnapshot()
+			})
+
+			describe('monadic', () => {
+				test('immutable', () => {
+					expect(ast`
+						func (i32 a): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('mutable', () => {
+					expect(ast`
+						func (mut i32 a): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+			})
+
+			describe('dyadic', () => {
+				test('immutable', () => {
+					expect(ast`
+						func (i32 a, i32 b): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('mutable', () => {
+					expect(ast`
+						func (mut i32 a, mut i32 b): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('1 mutable', () => {
+					expect(ast`
+						func (mut i32 a, i32 b): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('2 mutable', () => {
+					expect(ast`
+						func (i32 a, mut i32 b): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+			})
+
+			describe('triadic', () => {
+				test('immutable', () => {
+					expect(ast`
+						func (i32 a, i32 b, i32 c): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('mutable', () => {
+					expect(ast`
+						func (mut i32 a, mut i32 b, mut i32 c): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('1 mutable', () => {
+					expect(ast`
+						func (mut i32 a, i32 b, i32 c): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('2 mutable', () => {
+					expect(ast`
+						func (i32 a, mut i32 b, i32 c): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('3 mutable', () => {
+					expect(ast`
+						func (i32 a, i32 b, mut i32 c): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('1-2 mutable', () => {
+					expect(ast`
+						func (mut i32 a, mut i32 b, i32 c): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('2-3 mutable', () => {
+					expect(ast`
+						func (i32 a, mut i32 b, mut i32 c): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+
+				test('1-3 mutable', () => {
+					expect(ast`
+						func (mut i32 a, i32 b, mut i32 c): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+			})
+
+			describe('function type', () => {
+				test('partially mutable dyadic', () => {
+					expect(ast`
+						func ((i32 a, mut i32 b): i32 a): i32 {
+							0;
+						};
+					`).toMatchSnapshot()
+				})
+			})
+		})
 	})
 
 	describe('statement', () => {
@@ -299,6 +437,16 @@ describe('parser', () => {
 				test('1-3 mutable', () => {
 					expect(ast`
 						func z (mut i32 a, i32 b, mut i32 c): i32 {
+							0;
+						}
+					`).toMatchSnapshot()
+				})
+			})
+
+			describe('function type', () => {
+				test('partially mutable dyadic', () => {
+					expect(ast`
+						func z ((i32 a, mut i32 b): i32 a): i32 {
 							0;
 						}
 					`).toMatchSnapshot()

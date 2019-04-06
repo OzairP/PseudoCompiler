@@ -17,10 +17,9 @@ type TypeKind =
 	| Kind.UInt128Type
 	| Kind.Float32Type
 	| Kind.Float64Type
+	| Kind.FunctionType
 
 export class Type<K extends TypeKind = TypeKind> extends Node<K> {
-	public token = Production.TYPE
-
 	constructor(public kind: K, public start: number, public width: number) {
 		super(kind, Production.TYPE, start, width)
 	}

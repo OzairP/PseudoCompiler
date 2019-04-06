@@ -42,6 +42,7 @@ export enum Kind {
 	UInt128Type,
 	Float32Type,
 	Float64Type,
+	FunctionType,
 
 	ParameterListEphemeral,
 	ArgumentListEphemeral
