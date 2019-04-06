@@ -115,7 +115,7 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 			case Lang.Token.Literal.FLOAT:
 				return new Syntax.FloatLiteral(node.start, node.width, Number.parseFloat(node.content!))
 			default:
-				;(node as Syntax.Expression).setToken(Production.EXPR)
+				node.token = Production.EXPR
 				break
 		}
 
@@ -234,7 +234,7 @@ const reducer: Record<Production, (nodes: Array<LRStackSymbol>, reductionWidth: 
 			;(nodes[0] as Syntax.IfStatement).setElseStatement(nodes[1] as Syntax.ElseStatement)
 		}
 
-		;(nodes[0] as Syntax.IfStatement).setToken(Production.COND_STMT)
+		nodes[0].token = Production.COND_STMT
 		return nodes[0] as Syntax.IfStatement
 	},
 }
