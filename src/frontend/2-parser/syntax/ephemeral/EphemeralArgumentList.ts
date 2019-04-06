@@ -5,12 +5,12 @@ import { Kind, Node } from '../Node'
 export class EphemeralArgumentList extends Node<Kind.ArgumentListEphemeral> {
 	public args: Array<Expression> = []
 
-	constructor (argument: Expression) {
+	constructor(argument: Expression) {
 		super(Kind.ArgumentListEphemeral, Production.ARGS, argument.start, argument.width)
 		this.add(argument)
 	}
 
-	public add (argument: Expression) {
+	public add(argument: Expression) {
 		this.args.push(argument)
 		this.width += argument.width
 	}

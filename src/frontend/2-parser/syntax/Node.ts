@@ -45,7 +45,7 @@ export enum Kind {
 	FunctionType,
 
 	ParameterListEphemeral,
-	ArgumentListEphemeral
+	ArgumentListEphemeral,
 }
 
 export class Node<K extends Kind = Kind> implements Token<Production> {

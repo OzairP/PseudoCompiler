@@ -18,10 +18,12 @@ describe('tokenizer', () => {
 
 	test('EOF token location works with empty file', () => {
 		const tokens = Array.from(lex(''))
-		expect(tokens).toMatchObject([{
-			token: 'eof_sym',
-			start: 0,
-			width: 0,
-		}])
+		expect(tokens).toMatchObject([
+			{
+				token: 'eof_sym',
+				start: 0,
+				width: 0,
+			},
+		])
 	})
 })

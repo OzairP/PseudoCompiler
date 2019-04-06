@@ -92,8 +92,7 @@ describe('parser', () => {
 		})
 
 		test('assignment', () => {
-			expect(ast`a = "foo";`)
-				.toMatchSnapshot()
+			expect(ast`a = "foo";`).toMatchSnapshot()
 		})
 
 		describe('call', () => {
