@@ -2259,6 +2259,63 @@ exports[`parser expression parenthesized 1`] = `
 }"
 `;
 
+exports[`parser multi statement three 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 3,
+  \\"statements\\": [
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 1,
+      \\"value\\": 0
+    },
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 3,
+      \\"width\\": 1,
+      \\"value\\": 0
+    },
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 6,
+      \\"width\\": 1,
+      \\"value\\": 0
+    }
+  ]
+}"
+`;
+
+exports[`parser multi statement two 1`] = `
+"{
+  \\"kind\\": 0,
+  \\"token\\": \\"PROGRAM\\",
+  \\"start\\": 0,
+  \\"width\\": 2,
+  \\"statements\\": [
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 0,
+      \\"width\\": 1,
+      \\"value\\": 0
+    },
+    {
+      \\"kind\\": 18,
+      \\"token\\": \\"STMT\\",
+      \\"start\\": 3,
+      \\"width\\": 1,
+      \\"value\\": 0
+    }
+  ]
+}"
+`;
+
 exports[`parser statement conditional statement if 1`] = `
 "{
   \\"kind\\": 0,

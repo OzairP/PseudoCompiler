@@ -453,4 +453,14 @@ describe('parser', () => {
 			})
 		})
 	})
+
+	describe('multi statement', () => {
+		test('two', () => {
+			expect(ast`0; 0;`).toMatchSnapshot()
+		})
+
+		test('three', () => {
+			expect(ast`0; 0; 0;`).toMatchSnapshot()
+		})
+	})
 })
