@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import { SyntaxError } from '../frontend/SyntaxError'
+import { SyntaxError } from '../01-frontend/SyntaxError'
 
 const toStringWidth = (line: string) => line.length + 1
 
