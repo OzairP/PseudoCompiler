@@ -1,7 +1,7 @@
 import { Production } from '../transitions'
 import { Kind, Node } from './Node'
 
-type TypeKind =
+export type TypeKind =
 	| Kind.VoidType
 	| Kind.BoolType
 	| Kind.StringType
