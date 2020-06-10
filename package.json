@@ -34,10 +34,10 @@
 		]
 	},
 	"devDependencies": {
-		"@types/jest": "^24.0.9",
-		"@types/node": "^11.13.0",
+		"@types/jest": "^26.0.0",
+		"@types/node": "^14.0.13",
 		"chalk": "^2.4.2",
-		"jest": "^24.1.0",
+		"jest": "^26.0.1",
 		"prettier": "^1.16.4",
 		"sloc": "^0.2.1",
 		"source-map-support": "^0.5.10",
